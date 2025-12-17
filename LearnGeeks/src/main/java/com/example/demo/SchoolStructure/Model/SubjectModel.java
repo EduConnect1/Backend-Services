@@ -16,7 +16,7 @@ public class SubjectModel {
     private Long id;
 
     @Column(nullable = false)
-    private String name;   // Mathematics, English
+    private String name;   
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "class_id", nullable = false)
