@@ -2,34 +2,34 @@ package com.example.demo.SchoolStructure.controller;
 
 import com.example.demo.SchoolStructure.DTO.ClassDTO.CreateClassRequest;
 import com.example.demo.SchoolStructure.DTO.ClassDTO.ClassResponse;
-import com.example.demo.SchoolStructure.Model.ClassModel;
-import com.example.demo.SchoolStructure.service.ClassService;
+import com.example.demo.SchoolStructure.Model.SchoolClass;
+import com.example.demo.SchoolStructure.service.SchoolClassService;
+
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-@RestController
 
+@RestController
 @RequestMapping("/api/classes")
 @RequiredArgsConstructor
-
-
 public class SchoolClassController {
    
-    private final ClassService classService;
+    private final SchoolClassService schoolClassService;
 
     @PostMapping
     public ResponseEntity<ClassResponse> createClass(
             @Valid @RequestBody CreateClassRequest request
     ) {
-        ClassModel ClassModel = ClassModel.builder()
+        SchoolClass schoolClass = SchoolClass.builder()
                 .name(request.getName())
                 .academicYear(request.getAcademicYear())
                 .build();
 
-        ClassModel saved = classService.createClass(ClassModel);
+        SchoolClass saved = schoolClassService.createClass(schoolClass);
 
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(ClassResponse.builder()
@@ -41,9 +41,9 @@ public class SchoolClassController {
 
     @GetMapping
     public ResponseEntity<List<ClassResponse>> getAllClasses() {
-        List<ClassResponse> response = ClassService.getAllClasses()
+        List<ClassResponse> response = schoolClassService.getAllClasses()
                 .stream()
-                .map(c -> SchoolClassResponse.builder()
+                .map(c -> ClassResponse.builder() 
                         .id(c.getId())
                         .name(c.getName())
                         .academicYear(c.getAcademicYear())
@@ -53,6 +53,3 @@ public class SchoolClassController {
         return ResponseEntity.ok(response);
     }
 }
-
-    
-

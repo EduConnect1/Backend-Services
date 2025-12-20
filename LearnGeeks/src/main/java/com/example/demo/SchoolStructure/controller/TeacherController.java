@@ -1,23 +1,26 @@
 package com.example.demo.SchoolStructure.controller;
+
+
+
 import com.example.demo.SchoolStructure.DTO.TeacherDTO.AssignSubjectRequest;
 import com.example.demo.SchoolStructure.DTO.TeacherDTO.CreateTeacherRequest;
 import com.example.demo.SchoolStructure.DTO.TeacherDTO.TeacherResponse;
-import com.example.demo.SchoolStructure.Model.TeacherModel;
-import com.example.demo.SchoolStructure.model.User;
-import com.example.demo.SchoolStructure.repository.UserRepository;
+import com.example.demo.SchoolStructure.Model.Teacher;
 import com.example.demo.SchoolStructure.service.TeacherService;
+import com.example.demo.User.Model.User;
+import com.example.demo.User.Repository.UserRepository;
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.stream.Collectors;
+
 @RestController
 @RequestMapping("/api/teachers")
 @RequiredArgsConstructor
-
 public class TeacherController {
-    
 
     private final TeacherService teacherService;
     private final UserRepository userRepository;
@@ -47,7 +50,7 @@ public class TeacherController {
     @PostMapping("/{teacherId}/subjects")
     public ResponseEntity<TeacherResponse> assignSubjects(
             @PathVariable Long teacherId,
-            @Valid @RequestBody AssignSubjectsRequest request
+            @Valid @RequestBody AssignSubjectRequest request
     ) {
         Teacher updated = teacherService.assignSubjects(teacherId, request.getSubjectIds());
 
@@ -66,6 +69,3 @@ public class TeacherController {
         );
     }
 }
-
-    
-

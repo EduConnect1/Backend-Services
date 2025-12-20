@@ -1,12 +1,12 @@
 package com.example.demo.SchoolStructure.service;
-import com.example.demo.SchoolStructure.Model.StudentModel;
 
-import com.example.demo.SchoolStructure.Model.ClassModel;
+import com.example.demo.SchoolStructure.Model.SchoolClass;
+import com.example.demo.SchoolStructure.Model.Subject;
 import com.example.demo.SchoolStructure.repository.SchoolClassRepository;
 import com.example.demo.SchoolStructure.repository.SubjectRepository;
-import com.example.demo.SchoolStructure.service.SubjectService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service
