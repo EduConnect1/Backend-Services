@@ -1,15 +1,17 @@
 package com.example.demo.SchoolStructure.service;
-import com.example.demo.SchoolStructure.Model.SubjectModel;
-import com.example.demo.SchoolStructure.Model.TeacherModel;
+
+import com.example.demo.SchoolStructure.Model.Subject;
+import com.example.demo.SchoolStructure.Model.Teacher;
 import com.example.demo.SchoolStructure.repository.SubjectRepository;
 import com.example.demo.SchoolStructure.repository.TeacherRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+
 import java.util.HashSet;
 import java.util.Set;
+
 @Service
 @RequiredArgsConstructor
-
 public class TeacherServiceImpl implements TeacherService {
 
     private final TeacherRepository teacherRepository;
@@ -42,6 +44,3 @@ public class TeacherServiceImpl implements TeacherService {
         teacherRepository.deleteById(id);
     }
 }
-
-    
-

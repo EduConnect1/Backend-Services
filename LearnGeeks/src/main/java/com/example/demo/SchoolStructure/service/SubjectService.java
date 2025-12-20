@@ -1,7 +1,6 @@
 package com.example.demo.SchoolStructure.service;
-import com.example.demo.SchoolStructure.Model.SubjectModel;
 
-
+import com.example.demo.SchoolStructure.Model.Subject;
 import java.util.List;
 
 public interface SubjectService {

@@ -1,20 +1,15 @@
 package com.example.demo.SchoolStructure.service;
-import com.example.demo.SchoolStructure.Model.StudentModel;
+
+import com.example.demo.SchoolStructure.Model.Student;
 import java.util.List;
 
-
-
 public interface StudentService {
-    
 
-    StudentModel createStudent(Long classId, StudentModel student);
+    Student createStudent(Long classId, Student student);
 
-    StudentModel getStudentById(Long id);
+    Student getStudentById(Long id);
 
-    List<StudentModel> getStudentsByClass(Long classId);
+    List<Student> getStudentsByClass(Long classId);
 
     void deleteStudent(Long id);
 }
-
-    
-

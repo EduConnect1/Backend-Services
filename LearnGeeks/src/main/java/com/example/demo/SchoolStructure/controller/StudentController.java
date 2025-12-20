@@ -1,9 +1,10 @@
 package com.example.demo.SchoolStructure.controller;
+
 import com.example.demo.SchoolStructure.DTO.StudentDTO.CreateStudentRequest;
 import com.example.demo.SchoolStructure.DTO.StudentDTO.StudentResponse;
-import com.example.demo.SchoolStructure.Model.StudentModel;
-import com.example.demo.SchoolStructure.Model.User;
-import com.example.demo.SchoolStructure.repository.UserRepository;
+import com.example.demo.SchoolStructure.Model.Student;
+import com.example.demo.User.Model.User;
+import com.example.demo.User.Repository.UserRepository;
 import com.example.demo.SchoolStructure.service.StudentService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -11,13 +12,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+
 @RestController
 @RequestMapping("/api/students")
 @RequiredArgsConstructor
-
-
 public class StudentController {
-    
 
     private final StudentService studentService;
     private final UserRepository userRepository;
@@ -64,6 +63,3 @@ public class StudentController {
         return ResponseEntity.ok(response);
     }
 }
-
-    
-

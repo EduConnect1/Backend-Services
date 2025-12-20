@@ -1,7 +1,7 @@
 package com.example.demo.SchoolStructure.service;
-import com.example.demo.SchoolStructure.Model.TeacherModel;
-import java.util.Set;
 
+import com.example.demo.SchoolStructure.Model.Teacher;
+import java.util.Set;
 
 public interface TeacherService {
 
@@ -13,6 +13,3 @@ public interface TeacherService {
 
     void deleteTeacher(Long id);
 }
-
-    
-

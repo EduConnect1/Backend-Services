@@ -1,24 +1,22 @@
 package com.example.demo.SchoolStructure.controller;
-import com.example.demo.SchoolStructure.Model.ParentModel;
+
 import com.example.demo.SchoolStructure.DTO.ParentDTO.CreateParentRequest;
 import com.example.demo.SchoolStructure.DTO.ParentDTO.ParentResponse;
+import com.example.demo.SchoolStructure.Model.Parent;
 import com.example.demo.SchoolStructure.service.ParentService;
 import com.example.demo.User.Model.User;
 import com.example.demo.User.Repository.UserRepository;
 import jakarta.validation.Valid;
-
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+
 @RestController
 @RequestMapping("/api/parents")
 @RequiredArgsConstructor
-
-
 public class ParentController {
-    
 
     private final ParentService parentService;
     private final UserRepository userRepository;
@@ -62,6 +60,3 @@ public class ParentController {
         return ResponseEntity.ok(response);
     }
 }
-
-    
-

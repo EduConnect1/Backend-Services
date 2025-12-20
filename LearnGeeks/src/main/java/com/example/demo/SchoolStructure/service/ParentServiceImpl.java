@@ -1,12 +1,13 @@
 package com.example.demo.SchoolStructure.service;
-import com.example.demo.SchoolStructure.Model.ParentModel;
-import com.example.demo.SchoolStructure.Model.StudentModel;
+
+import com.example.demo.SchoolStructure.Model.Parent;
+import com.example.demo.SchoolStructure.Model.Student;
 import com.example.demo.SchoolStructure.repository.ParentRepository;
 import com.example.demo.SchoolStructure.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import java.util.List;
 
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -16,8 +17,8 @@ public class ParentServiceImpl implements ParentService {
     private final StudentRepository studentRepository;
 
     @Override
-    public ParentModel createParent(Long studentId, ParentModel parent) {
-        StudentModel student = studentRepository.findById(studentId)
+    public Parent createParent(Long studentId, Parent parent) {
+        Student student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new RuntimeException("Student not found"));
 
         parent.setStudent(student);
@@ -25,13 +26,13 @@ public class ParentServiceImpl implements ParentService {
     }
 
     @Override
-    public ParentModel getParentById(Long id) {
+    public Parent getParentById(Long id) {
         return parentRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Parent not found"));
     }
 
     @Override
-    public List<ParentModel> getParentsByStudent(Long studentId) {
+    public List<Parent> getParentsByStudent(Long studentId) {
         return parentRepository.findByStudentId(studentId);
     }
 

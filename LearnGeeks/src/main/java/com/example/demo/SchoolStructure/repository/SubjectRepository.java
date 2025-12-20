@@ -1,15 +1,15 @@
 package com.example.demo.SchoolStructure.repository;
-import com.example.demo.SchoolStructure.Model.SubjectModel;
+
+import com.example.demo.SchoolStructure.Model.Subject;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
 
 import java.util.List;
 
 @Repository
-public interface SubjectRepository extends JpaRepository<SubjectModel, Long> {
+public interface SubjectRepository extends JpaRepository<Subject, Long> {
 
-    List<SubjectModel> findBySchoolClassId(Long classId);
+    List<Subject> findBySchoolClassId(Long classId);
 
     boolean existsByNameAndSchoolClassId(String name, Long classId);
 }

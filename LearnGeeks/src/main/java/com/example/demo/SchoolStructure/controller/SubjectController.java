@@ -1,21 +1,21 @@
 package com.example.demo.SchoolStructure.controller;
+
 import com.example.demo.SchoolStructure.DTO.SubjectDTO.CreateSubjectRequest;
 import com.example.demo.SchoolStructure.DTO.SubjectDTO.SubjectResponse;
-import com.example.demo.SchoolStructure.Model.SubjectModel;
+import com.example.demo.SchoolStructure.Model.Subject;
 import com.example.demo.SchoolStructure.service.SubjectService;
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+
 @RestController
 @RequestMapping("/api/subjects")
 @RequiredArgsConstructor
-
-
 public class SubjectController {
-    
 
     private final SubjectService subjectService;
 
@@ -55,6 +55,3 @@ public class SubjectController {
         return ResponseEntity.ok(response);
     }
 }
-
-    
-

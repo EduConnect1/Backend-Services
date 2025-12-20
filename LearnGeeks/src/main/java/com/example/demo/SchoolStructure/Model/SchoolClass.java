@@ -2,6 +2,7 @@ package com.example.demo.SchoolStructure.Model;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 @Entity
 @Table(name = "school_classes")
 @Getter
@@ -9,9 +10,8 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ClassModel {
+public class SchoolClass {
     
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,6 +22,3 @@ public class ClassModel {
     @Column(nullable = false)
     private String academicYear;     
 }
-
-    
-
