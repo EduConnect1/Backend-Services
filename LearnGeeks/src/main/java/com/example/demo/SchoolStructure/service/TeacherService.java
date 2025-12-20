@@ -1,10 +1,9 @@
 package com.example.demo.SchoolStructure.service;
-import com.example.demo.SchoolStructure.model.Teacher;
+import com.example.demo.SchoolStructure.Model.TeacherModel;
 import java.util.Set;
 
 
-public class TeacherService {
-    
+public interface TeacherService {
 
     Teacher createTeacher(Teacher teacher);
 

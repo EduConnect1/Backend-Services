@@ -1,6 +1,6 @@
 package com.example.demo.SchoolStructure.service;
-import com.example.demo.SchoolStructure.Model.Subject;
-import com.example.demo.SchoolStructure.Model.Teacher;
+import com.example.demo.SchoolStructure.Model.SubjectModel;
+import com.example.demo.SchoolStructure.Model.TeacherModel;
 import com.example.demo.SchoolStructure.repository.SubjectRepository;
 import com.example.demo.SchoolStructure.repository.TeacherRepository;
 import lombok.RequiredArgsConstructor;
