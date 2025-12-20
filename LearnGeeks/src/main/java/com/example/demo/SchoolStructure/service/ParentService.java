@@ -1,17 +1,17 @@
 package com.example.demo.SchoolStructure.service;
 
 
-import com.school.automation.model.Parent;
+import com.example.demo.SchoolStructure.Model.ParentModel;
 
 import java.util.List;
 
 public interface ParentService {
 
-    Parent createParent(Long studentId, Parent parent);
+    ParentModel createParent(Long studentId, ParentModel parent);
 
-    Parent getParentById(Long id);
+    ParentModel getParentById(Long id);
 
-    List<Parent> getParentsByStudent(Long studentId);
+    List<ParentModel> getParentsByStudent(Long studentId);
 
     void deleteParent(Long id);
 }

@@ -16,8 +16,8 @@ public class ParentServiceImpl implements ParentService {
     private final StudentRepository studentRepository;
 
     @Override
-    public Parent createParent(Long studentId, Parent parent) {
-        Student student = studentRepository.findById(studentId)
+    public ParentModel createParent(Long studentId, ParentModel parent) {
+        StudentModel student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new RuntimeException("Student not found"));
 
         parent.setStudent(student);
@@ -25,13 +25,13 @@ public class ParentServiceImpl implements ParentService {
     }
 
     @Override
-    public Parent getParentById(Long id) {
+    public ParentModel getParentById(Long id) {
         return parentRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Parent not found"));
     }
 
     @Override
-    public List<Parent> getParentsByStudent(Long studentId) {
+    public List<ParentModel> getParentsByStudent(Long studentId) {
         return parentRepository.findByStudentId(studentId);
     }
 

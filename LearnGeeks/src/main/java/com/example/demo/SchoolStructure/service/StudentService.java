@@ -1,5 +1,5 @@
 package com.example.demo.SchoolStructure.service;
-import com.example.demo.SchoolStructure.model.Student;
+import com.example.demo.SchoolStructure.Model.StudentModel;
 import java.util.List;
 
 
@@ -7,11 +7,11 @@ import java.util.List;
 public interface StudentService {
     
 
-    Student createStudent(Long classId, Student student);
+    StudentModel createStudent(Long classId, StudentModel student);
 
-    Student getStudentById(Long id);
+    StudentModel getStudentById(Long id);
 
-    List<Student> getStudentsByClass(Long classId);
+    List<StudentModel> getStudentsByClass(Long classId);
 
     void deleteStudent(Long id);
 }

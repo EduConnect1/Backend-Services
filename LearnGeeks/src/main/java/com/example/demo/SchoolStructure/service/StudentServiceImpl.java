@@ -14,23 +14,23 @@ public class StudentServiceImpl implements StudentService {
     private final SchoolClassRepository schoolClassRepository;
 
     @Override
-    public Student createStudent(Long classId, Student student) {
-        SchoolClass schoolClass = schoolClassRepository.findById(classId)
+    public StudentModel createStudent(Long classId, StudentModel  student) {
+        ClassModel schoolClass = schoolClassRepository.findById(classId)
                 .orElseThrow(() -> new RuntimeException("Class not found"));
 
-        student.setSchoolClass(schoolClass);
+        student.setClassModel(schoolClass);
         return studentRepository.save(student);
     }
 
     @Override
-    public Student getStudentById(Long id) {
+    public StudentModel getStudentById(Long id) {
         return studentRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Student not found"));
     }
 
     @Override
-    public List<Student> getStudentsByClass(Long classId) {
-        return studentRepository.findBySchoolClassId(classId);
+    public List<StudentModel> getStudentsByClass(Long classId) {
+        return studentRepository.findByClassModelId(classId);
     }
 
     @Override
