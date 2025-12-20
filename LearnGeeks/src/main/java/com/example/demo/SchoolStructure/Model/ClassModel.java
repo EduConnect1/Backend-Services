@@ -17,10 +17,10 @@ public class ClassModel {
     private Long id;
 
     @Column(nullable = false)
-    private String name;              // P1, P2, S1, S2
+    private String name;              
 
     @Column(nullable = false)
-    private String academicYear;      // 2024-2025
+    private String academicYear;     
 }
 
     
