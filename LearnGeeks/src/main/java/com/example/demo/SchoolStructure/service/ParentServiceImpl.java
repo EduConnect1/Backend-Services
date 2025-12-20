@@ -1,6 +1,6 @@
 package com.example.demo.SchoolStructure.service;
-import com.example.demo.SchoolStructure.model.Parent;
-import com.example.demo.SchoolStructure.model.Student;
+import com.example.demo.SchoolStructure.Model.ParentModel;
+import com.example.demo.SchoolStructure.Model.StudentModel;
 import com.example.demo.SchoolStructure.repository.ParentRepository;
 import com.example.demo.SchoolStructure.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
