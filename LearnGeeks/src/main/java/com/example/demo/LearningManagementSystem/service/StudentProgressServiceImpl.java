@@ -1,10 +1,11 @@
 package com.example.demo.LearningManagementSystem.service;
 
 import com.example.demo.LearningManagementSystem.DTO.StudentCourseProgressResponse;
+
+
 import com.example.demo.LearningManagementSystem.Model.StudentCourseProgress;
+
 import com.example.demo.LearningManagementSystem.repository.StudentCourseProgressRepository;
-
-
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Service;
 public class StudentProgressServiceImpl implements StudentProgressService {
 
     private final StudentCourseProgressRepository progressRepository;
-    // private final StudentRepository studentRepository;
+    
 
     @Override
     public StudentCourseProgressResponse getStudentProgress(Long studentId, Long courseId) {
