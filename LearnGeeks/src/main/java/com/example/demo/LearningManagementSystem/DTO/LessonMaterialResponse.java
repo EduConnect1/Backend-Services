@@ -1,5 +1,11 @@
 package com.example.demo.LearningManagementSystem.DTO;
 
-public class LessonMaterialResponse {
-    
+
+
+public record LessonMaterialResponse(
+        Long id,
+        String title,
+        String contentUrl
+) {
 }
+
