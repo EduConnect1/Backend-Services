@@ -26,4 +26,7 @@ public class Student {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "class_id", nullable = false)
     private SchoolClass schoolClass; // Field name changed to match getter/setter expectation if any, but sticking to standard naming convention
+    public String getFullName() {
+        return user != null ? user.getFullName() : "Unknown";
+    }
 }

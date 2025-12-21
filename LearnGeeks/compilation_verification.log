@@ -1,0 +1,162 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:demo >--------------------------
+[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ demo ---
+[INFO] Deleting C:\Users\HP\Backend-Services\LearnGeeks\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ demo ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ demo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 53 source files with javac [debug parameters release 21] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[40,24] cannot find symbol
+  symbol:   method schoolClassId()
+  location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[41,24] cannot find symbol
+  symbol:   method subjectId()
+  location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[42,24] cannot find symbol
+  symbol:   method attendanceDate()
+  location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[47,73] cannot find symbol
+  symbol:   method schoolClassId()
+  location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[50,61] cannot find symbol
+  symbol:   method subjectId()
+  location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[53,61] cannot find symbol
+  symbol:   method teacherId()
+  location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[56,54] cannot find symbol
+  symbol:   method builder()
+  location: class com.example.demo.Attendance.model.AttendanceSession
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[60,40] cannot find symbol
+  symbol:   method attendanceDate()
+  location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[72,24] cannot find symbol
+  symbol:   method getFullName()
+  location: variable teacher of type com.example.demo.SchoolStructure.Model.Teacher
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[88,28] cannot find symbol
+  symbol:   method studentId()
+  location: variable request of type com.example.demo.Attendance.DTO.MarkAttendanceRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[90,103] cannot find symbol
+  symbol:   method studentId()
+  location: variable request of type com.example.demo.Attendance.DTO.MarkAttendanceRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[93,65] cannot find symbol
+  symbol:   method studentId()
+  location: variable request of type com.example.demo.Attendance.DTO.MarkAttendanceRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[96,55] cannot find symbol
+  symbol:   method builder()
+  location: class com.example.demo.Attendance.model.AttendanceRecord
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[99,36] cannot find symbol
+  symbol:   method status()
+  location: variable request of type com.example.demo.Attendance.DTO.MarkAttendanceRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[100,37] cannot find symbol
+  symbol:   method remarks()
+  location: variable request of type com.example.demo.Attendance.DTO.MarkAttendanceRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[119,39] cannot find symbol
+  symbol:   method getFullName()
+  location: class com.example.demo.SchoolStructure.Model.Student
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[123,24] incompatible types: java.util.List<java.lang.Object> cannot be converted to java.util.List<com.example.demo.Attendance.DTO.AttendanceRecordResponse>
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[147,24] cannot find symbol
+  symbol:   method getFullName()
+  location: variable student of type com.example.demo.SchoolStructure.Model.Student
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[165,20] constructor ClassAttendanceSummaryResponse in class com.example.demo.Attendance.DTO.ClassAttendanceSummaryResponse cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.String,int,int
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[178,39] cannot find symbol
+  symbol:   method attendancePercentage()
+  location: variable summary of type com.example.demo.Attendance.DTO.StudentAttendanceSummaryResponse
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[183,16] constructor ClassAttendanceSummaryResponse in class com.example.demo.Attendance.DTO.ClassAttendanceSummaryResponse cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.Long,java.lang.String,int,double
+  reason: actual and formal argument lists differ in length
+[INFO] 21 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.496 s
+[INFO] Finished at: 2025-12-21T03:34:12+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project demo: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[40,24] cannot find symbol
+[ERROR]   symbol:   method schoolClassId()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[41,24] cannot find symbol
+[ERROR]   symbol:   method subjectId()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[42,24] cannot find symbol
+[ERROR]   symbol:   method attendanceDate()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[47,73] cannot find symbol
+[ERROR]   symbol:   method schoolClassId()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[50,61] cannot find symbol
+[ERROR]   symbol:   method subjectId()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[53,61] cannot find symbol
+[ERROR]   symbol:   method teacherId()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[56,54] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.example.demo.Attendance.model.AttendanceSession
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[60,40] cannot find symbol
+[ERROR]   symbol:   method attendanceDate()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.CreateAttendanceSessionRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[72,24] cannot find symbol
+[ERROR]   symbol:   method getFullName()
+[ERROR]   location: variable teacher of type com.example.demo.SchoolStructure.Model.Teacher
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[88,28] cannot find symbol
+[ERROR]   symbol:   method studentId()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.MarkAttendanceRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[90,103] cannot find symbol
+[ERROR]   symbol:   method studentId()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.MarkAttendanceRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[93,65] cannot find symbol
+[ERROR]   symbol:   method studentId()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.MarkAttendanceRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[96,55] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.example.demo.Attendance.model.AttendanceRecord
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[99,36] cannot find symbol
+[ERROR]   symbol:   method status()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.MarkAttendanceRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[100,37] cannot find symbol
+[ERROR]   symbol:   method remarks()
+[ERROR]   location: variable request of type com.example.demo.Attendance.DTO.MarkAttendanceRequest
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[119,39] cannot find symbol
+[ERROR]   symbol:   method getFullName()
+[ERROR]   location: class com.example.demo.SchoolStructure.Model.Student
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[123,24] incompatible types: java.util.List<java.lang.Object> cannot be converted to java.util.List<com.example.demo.Attendance.DTO.AttendanceRecordResponse>
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[147,24] cannot find symbol
+[ERROR]   symbol:   method getFullName()
+[ERROR]   location: variable student of type com.example.demo.SchoolStructure.Model.Student
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[165,20] constructor ClassAttendanceSummaryResponse in class com.example.demo.Attendance.DTO.ClassAttendanceSummaryResponse cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.String,int,int
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[178,39] cannot find symbol
+[ERROR]   symbol:   method attendancePercentage()
+[ERROR]   location: variable summary of type com.example.demo.Attendance.DTO.StudentAttendanceSummaryResponse
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/service/AttendanceServiceImpl.java:[183,16] constructor ClassAttendanceSummaryResponse in class com.example.demo.Attendance.DTO.ClassAttendanceSummaryResponse cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.Long,java.lang.String,int,double
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

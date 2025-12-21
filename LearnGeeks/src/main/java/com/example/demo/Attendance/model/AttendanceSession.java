@@ -4,10 +4,16 @@ import com.example.demo.SchoolStructure.Model.Subject;
 import com.example.demo.SchoolStructure.Model.Teacher;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 import java.time.LocalDate;
 @Data
 @Entity
 @Table(name = "attendance_sessions")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 
 
 public class AttendanceSession {

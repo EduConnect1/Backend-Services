@@ -2,9 +2,15 @@ package com.example.demo.Attendance.model;
 import com.example.demo.SchoolStructure.Model.Student;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 @Data
 @Entity
 @Table(name = "attendance_records")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 
 
 public class AttendanceRecord {

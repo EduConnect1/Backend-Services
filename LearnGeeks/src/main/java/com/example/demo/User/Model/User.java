@@ -34,4 +34,7 @@ public class User {
         STUDENT,
         PARENT
     }
+    public String getFullName() {
+        return firstname + " " + lastname;
+    }
 }

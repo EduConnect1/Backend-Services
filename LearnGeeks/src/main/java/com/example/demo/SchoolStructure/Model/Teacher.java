@@ -33,4 +33,7 @@ public class Teacher {
         inverseJoinColumns = @JoinColumn(name = "subject_id")
     )
     private Set<Subject> subjects;
+    public String getFullName() {
+        return user != null ? user.getFullName() : "Unknown";
+    }
 }

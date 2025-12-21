@@ -1,23 +1,18 @@
 package com.example.demo.Attendance.DTO;
+
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 
+public record CreateAttendanceSessionRequest(
+    @NotNull(message = "Class ID is required")
+    Long schoolClassId,
 
-public class CreateAttendanceSessionRequest {
-    
+    @NotNull(message = "Subject ID is required")
+    Long subjectId,
 
-        @NotNull(message = "Class ID is required")
-        Long schoolClassId;
+    @NotNull(message = "Teacher ID is required")
+    Long teacherId,
 
-        @NotNull(message = "Subject ID is required")
-        Long subjectId;
-
-        @NotNull(message = "Teacher ID is required")
-        Long teacherId;
-
-
-        @NotNull(message = "Attendance date is required")
-        LocalDate attendanceDate ;
-        
-    
-}
+    @NotNull(message = "Attendance date is required")
+    LocalDate attendanceDate
+) {}
