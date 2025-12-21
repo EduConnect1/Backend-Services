@@ -8,8 +8,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "teachers")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -33,4 +32,7 @@ public class Teacher {
         inverseJoinColumns = @JoinColumn(name = "subject_id")
     )
     private Set<Subject> subjects;
+    public String getFullName() {
+        return user != null ? user.getFullName() : "Unknown";
+    }
 }

@@ -1,17 +1,7 @@
 package com.example.demo.SchoolStructure.DTO.ClassDTO;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class ClassResponse {
-
-    private Long id;
-    private String name;
-    private String academicYear;
-}
+public record ClassResponse(
+    Long id,
+    String name,
+    String academicYear
+) {}

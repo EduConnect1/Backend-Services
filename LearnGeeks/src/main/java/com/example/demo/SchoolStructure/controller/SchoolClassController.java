@@ -6,6 +6,7 @@ import com.example.demo.SchoolStructure.Model.SchoolClass;
 import com.example.demo.SchoolStructure.service.SchoolClassService;
 
 
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -25,29 +26,29 @@ public class SchoolClassController {
             @Valid @RequestBody CreateClassRequest request
     ) {
         SchoolClass schoolClass = SchoolClass.builder()
-                .name(request.getName())
-                .academicYear(request.getAcademicYear())
+                .name(request.name())
+                .academicYear(request.academicYear())
                 .build();
 
         SchoolClass saved = schoolClassService.createClass(schoolClass);
 
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(ClassResponse.builder()
-                        .id(saved.getId())
-                        .name(saved.getName())
-                        .academicYear(saved.getAcademicYear())
-                        .build());
+                .body(new ClassResponse(
+                        saved.getId(),
+                        saved.getName(),
+                        saved.getAcademicYear()
+                ));
     }
 
     @GetMapping
     public ResponseEntity<List<ClassResponse>> getAllClasses() {
         List<ClassResponse> response = schoolClassService.getAllClasses()
                 .stream()
-                .map(c -> ClassResponse.builder() 
-                        .id(c.getId())
-                        .name(c.getName())
-                        .academicYear(c.getAcademicYear())
-                        .build())
+                .map(c -> new ClassResponse(
+                        c.getId(),
+                        c.getName(),
+                        c.getAcademicYear()
+                ))
                 .toList();
 
         return ResponseEntity.ok(response);

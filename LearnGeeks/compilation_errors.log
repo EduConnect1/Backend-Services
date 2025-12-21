@@ -1,0 +1,50 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.example:demo >--------------------------
+[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ demo ---
+[INFO] Deleting C:\Users\HP\Backend-Services\LearnGeeks\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ demo ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ demo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 53 source files with javac [debug parameters release 21] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/Controller/AttendanceController.java:[3,43] package com.example.demo.Attendance.Service does not exist
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/Controller/AttendanceController.java:[20,19] cannot find symbol
+  symbol:   class AttendanceService
+  location: class com.example.demo.Attendance.Controller.AttendanceController
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/Controller/AttendanceController.java:[17,1] cannot find symbol
+  symbol:   class AttendanceService
+  location: class com.example.demo.Attendance.Controller.AttendanceController
+[INFO] 3 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.517 s
+[INFO] Finished at: 2025-12-21T03:32:34+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project demo: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/Controller/AttendanceController.java:[3,43] package com.example.demo.Attendance.Service does not exist
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/Controller/AttendanceController.java:[20,19] cannot find symbol
+[ERROR]   symbol:   class AttendanceService
+[ERROR]   location: class com.example.demo.Attendance.Controller.AttendanceController
+[ERROR] /C:/Users/HP/Backend-Services/LearnGeeks/src/main/java/com/example/demo/Attendance/Controller/AttendanceController.java:[17,1] cannot find symbol
+[ERROR]   symbol:   class AttendanceService
+[ERROR]   location: class com.example.demo.Attendance.Controller.AttendanceController
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

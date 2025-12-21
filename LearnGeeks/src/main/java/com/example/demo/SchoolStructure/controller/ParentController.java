@@ -25,22 +25,22 @@ public class ParentController {
     public ResponseEntity<ParentResponse> createParent(
             @Valid @RequestBody CreateParentRequest request
     ) {
-        User user = userRepository.findById(request.getUserId())
+        User user = userRepository.findById(request.userId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
         Parent parent = Parent.builder()
                 .user(user)
                 .build();
 
-        Parent saved = parentService.createParent(request.getStudentId(), parent);
+        Parent saved = parentService.createParent(request.studentId(), parent);
 
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(ParentResponse.builder()
-                        .id(saved.getId())
-                        .userId(saved.getUser().getId())
-                        .studentId(saved.getStudent().getId())
-                        .studentAdmissionNumber(saved.getStudent().getAdmissionNumber())
-                        .build());
+                .body(new ParentResponse(
+                        saved.getId(),
+                        saved.getUser().getId(),
+                        saved.getStudent().getId(),
+                        saved.getStudent().getAdmissionNumber()
+                ));
     }
 
     @GetMapping("/student/{studentId}")
@@ -49,12 +49,12 @@ public class ParentController {
     ) {
         List<ParentResponse> response = parentService.getParentsByStudent(studentId)
                 .stream()
-                .map(p -> ParentResponse.builder()
-                        .id(p.getId())
-                        .userId(p.getUser().getId())
-                        .studentId(p.getStudent().getId())
-                        .studentAdmissionNumber(p.getStudent().getAdmissionNumber())
-                        .build())
+                .map(p -> new ParentResponse(
+                        p.getId(),
+                        p.getUser().getId(),
+                        p.getStudent().getId(),
+                        p.getStudent().getAdmissionNumber()
+                ))
                 .toList();
 
         return ResponseEntity.ok(response);

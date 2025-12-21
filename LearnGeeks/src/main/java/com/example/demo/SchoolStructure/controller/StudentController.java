@@ -3,9 +3,9 @@ package com.example.demo.SchoolStructure.controller;
 import com.example.demo.SchoolStructure.DTO.StudentDTO.CreateStudentRequest;
 import com.example.demo.SchoolStructure.DTO.StudentDTO.StudentResponse;
 import com.example.demo.SchoolStructure.Model.Student;
+import com.example.demo.SchoolStructure.service.StudentService;
 import com.example.demo.User.Model.User;
 import com.example.demo.User.Repository.UserRepository;
-import com.example.demo.SchoolStructure.service.StudentService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -25,24 +25,24 @@ public class StudentController {
     public ResponseEntity<StudentResponse> createStudent(
             @Valid @RequestBody CreateStudentRequest request
     ) {
-        User user = userRepository.findById(request.getUserId())
+        User user = userRepository.findById(request.userId())
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
         Student student = Student.builder()
                 .user(user)
-                .admissionNumber(request.getAdmissionNumber())
+                .admissionNumber(request.admissionNumber())
                 .build();
 
-        Student saved = studentService.createStudent(request.getClassId(), student);
+        Student saved = studentService.createStudent(request.classId(), student);
 
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(StudentResponse.builder()
-                        .id(saved.getId())
-                        .admissionNumber(saved.getAdmissionNumber())
-                        .userId(saved.getUser().getId())
-                        .classId(saved.getSchoolClass().getId())
-                        .className(saved.getSchoolClass().getName())
-                        .build());
+                .body(new StudentResponse(
+                        saved.getId(),
+                        saved.getAdmissionNumber(),
+                        saved.getUser().getId(),
+                        saved.getSchoolClass().getId(),
+                        saved.getSchoolClass().getName()
+                ));
     }
 
     @GetMapping("/class/{classId}")
@@ -51,13 +51,13 @@ public class StudentController {
     ) {
         List<StudentResponse> response = studentService.getStudentsByClass(classId)
                 .stream()
-                .map(s -> StudentResponse.builder()
-                        .id(s.getId())
-                        .admissionNumber(s.getAdmissionNumber())
-                        .userId(s.getUser().getId())
-                        .classId(s.getSchoolClass().getId())
-                        .className(s.getSchoolClass().getName())
-                        .build())
+                .map(s -> new StudentResponse(
+                        s.getId(),
+                        s.getAdmissionNumber(),
+                        s.getUser().getId(),
+                        s.getSchoolClass().getId(),
+                        s.getSchoolClass().getName()
+                ))
                 .toList();
 
         return ResponseEntity.ok(response);
