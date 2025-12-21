@@ -2,17 +2,11 @@ package com.example.demo.SchoolStructure.DTO.SubjectDTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.Data;
 
-@Data
-public class CreateSubjectRequest {
-    
+public record CreateSubjectRequest(
     @NotBlank(message = "Subject name is required")
-    private String name;
+    String name,
 
     @NotNull(message = "Class ID is required")
-    private Long classId;
-}
-
-    
-
+    Long classId
+) {}

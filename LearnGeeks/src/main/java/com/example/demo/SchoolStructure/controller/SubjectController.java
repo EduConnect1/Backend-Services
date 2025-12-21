@@ -4,7 +4,6 @@ import com.example.demo.SchoolStructure.DTO.SubjectDTO.CreateSubjectRequest;
 import com.example.demo.SchoolStructure.DTO.SubjectDTO.SubjectResponse;
 import com.example.demo.SchoolStructure.Model.Subject;
 import com.example.demo.SchoolStructure.service.SubjectService;
-
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -24,18 +23,18 @@ public class SubjectController {
             @Valid @RequestBody CreateSubjectRequest request
     ) {
         Subject subject = Subject.builder()
-                .name(request.getName())
+                .name(request.name())
                 .build();
 
-        Subject saved = subjectService.createSubject(request.getClassId(), subject);
+        Subject saved = subjectService.createSubject(request.classId(), subject);
 
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(SubjectResponse.builder()
-                        .id(saved.getId())
-                        .name(saved.getName())
-                        .classId(saved.getSchoolClass().getId())
-                        .className(saved.getSchoolClass().getName())
-                        .build());
+                .body(new SubjectResponse(
+                        saved.getId(),
+                        saved.getName(),
+                        saved.getSchoolClass().getId(),
+                        saved.getSchoolClass().getName()
+                ));
     }
 
     @GetMapping("/class/{classId}")
@@ -44,12 +43,12 @@ public class SubjectController {
     ) {
         List<SubjectResponse> response = subjectService.getSubjectsByClass(classId)
                 .stream()
-                .map(s -> SubjectResponse.builder()
-                        .id(s.getId())
-                        .name(s.getName())
-                        .classId(s.getSchoolClass().getId())
-                        .className(s.getSchoolClass().getName())
-                        .build())
+                .map(s -> new SubjectResponse(
+                        s.getId(),
+                        s.getName(),
+                        s.getSchoolClass().getId(),
+                        s.getSchoolClass().getName()
+                ))
                 .toList();
 
         return ResponseEntity.ok(response);
