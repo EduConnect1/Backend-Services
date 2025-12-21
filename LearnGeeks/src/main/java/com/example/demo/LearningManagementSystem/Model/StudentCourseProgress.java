@@ -29,6 +29,8 @@ public class StudentCourseProgress {
     @JoinColumn(name = "course_id")
     private Course course;
 
+    private int completedLessons;
+
     @Column(nullable = false)
     private double completionPercentage;
 }
