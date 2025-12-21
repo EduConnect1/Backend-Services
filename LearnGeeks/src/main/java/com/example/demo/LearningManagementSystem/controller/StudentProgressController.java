@@ -1,7 +1,7 @@
 package com.example.demo.LearningManagementSystem.controller;
 
-import com.school.automation.lms.dto.StudentCourseProgressResponse;
-import com.school.automation.lms.service.StudentProgressService;
+import com.example.demo.LearningManagementSystem.DTO.StudentCourseProgressResponse;
+import com.example.demo.LearningManagementSystem.service.StudentProgressService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
