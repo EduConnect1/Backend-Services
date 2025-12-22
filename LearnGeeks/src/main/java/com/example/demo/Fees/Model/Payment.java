@@ -27,5 +27,5 @@ public class Payment {
 
     private LocalDateTime paymentDate;
 
-    private String method; // e.g., CASH, MPESA, CARD
+    private String method; 
 }

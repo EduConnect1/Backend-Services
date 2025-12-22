@@ -1,7 +1,5 @@
 package com.example.demo.LearningManagementSystem.Model;
 
-
-
 import jakarta.persistence.*;
 import lombok.*;
 

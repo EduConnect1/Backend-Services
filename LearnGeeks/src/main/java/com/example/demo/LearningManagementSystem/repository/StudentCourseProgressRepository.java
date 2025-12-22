@@ -1,7 +1,5 @@
 package com.example.demo.LearningManagementSystem.repository;
 
-
-
 import com.example.demo.LearningManagementSystem.Model.StudentCourseProgress;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
