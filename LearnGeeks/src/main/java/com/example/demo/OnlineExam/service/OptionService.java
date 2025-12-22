@@ -1,5 +1,9 @@
 package com.example.demo.OnlineExam.service;
 
-public class OptionService {
-    
+import com.example.demo.OnlineExam.DTO.CreateOptionRequest;
+
+public interface OptionService {
+
+    void createOption(CreateOptionRequest request);
 }
+
