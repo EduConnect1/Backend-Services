@@ -17,7 +17,6 @@ import java.time.LocalDate;
 
 
 public class AttendanceSession {
-    
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

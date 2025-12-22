@@ -14,7 +14,6 @@ import lombok.AllArgsConstructor;
 
 
 public class AttendanceRecord {
-    
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
