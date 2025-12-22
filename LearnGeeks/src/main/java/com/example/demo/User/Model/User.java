@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "_user") // 'user' is a reserved keyword in Postgres usually
+@Table(name = "_user") 
 public class User {
 
     @Id
@@ -26,7 +26,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    // Minimal Role enum to satisfy potential usage
+    
     public enum Role {
         USER,
         ADMIN,

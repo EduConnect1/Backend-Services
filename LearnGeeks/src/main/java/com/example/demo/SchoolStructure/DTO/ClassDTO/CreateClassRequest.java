@@ -4,8 +4,8 @@ import jakarta.validation.constraints.NotBlank;
 
 public record CreateClassRequest(
     @NotBlank(message = "Class name is required")
-    String name,           // P1, S2
+    String name,           
 
     @NotBlank(message = "Academic year is required")
-    String academicYear   // 2024-2025
+    String academicYear   
 ) {}

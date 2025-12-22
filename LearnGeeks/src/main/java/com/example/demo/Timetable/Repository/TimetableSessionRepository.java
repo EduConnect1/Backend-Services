@@ -1,7 +1,5 @@
 package com.example.demo.Timetable.Repository;
 
-
-
 import com.example.demo.Timetable.Model.TimetableSession;
 import com.example.demo.SchoolStructure.Model.SchoolClass;
 import com.example.demo.SchoolStructure.Model.Teacher;
