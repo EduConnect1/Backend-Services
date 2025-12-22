@@ -1,7 +1,5 @@
 package com.example.demo.ResultManagement.Controller;
 
-
-
 import com.example.demo.ResultManagement.DTO.ExamResultRequest;
 import com.example.demo.ResultManagement.DTO.ExamResultResponse;
 import com.example.demo.ResultManagement.service.ExamResultService;

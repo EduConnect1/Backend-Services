@@ -1,11 +1,8 @@
 package com.example.demo.ResultManagement.Model;
 import com.example.demo.SchoolStructure.Model.SchoolClass;
 
-
 import jakarta.persistence.*;
 import lombok.*;
-
-
 
 @Entity
 @Table(name = "subjects")
