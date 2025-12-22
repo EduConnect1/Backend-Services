@@ -14,8 +14,6 @@ import com.example.demo.Assignment.Model.AssignmentStatus;
 import com.example.demo.Assignment.repository.AssignmentRepository;
 import com.example.demo.Assignment.repository.AssignmentSubmissionRepository;
 
-// import com.example.demo.Assignment.service.AssignmentService;
-
 import com.example.demo.SchoolStructure.Model.Subject;
 import com.example.demo.SchoolStructure.repository.SubjectRepository;
 
@@ -47,7 +45,6 @@ public class AssignmentServiceImpl implements AssignmentService {
     private final TeacherRepository teacherRepository;
     private final StudentRepository studentRepository;
 
-    // 1️⃣ Create Assignment
     @Override
     public AssignmentResponse createAssignment(CreateAssignmentRequest request) {
 
@@ -80,8 +77,6 @@ public class AssignmentServiceImpl implements AssignmentService {
                 saved.getCreatedAt()
         );
     }
-
-    // 2️⃣ Get Assignments by Subject
     @Override
     public List<AssignmentResponse> getAssignmentsBySubject(Long subjectId) {
 
@@ -100,8 +95,6 @@ public class AssignmentServiceImpl implements AssignmentService {
                 ))
                 .toList();
     }
-
-    // 3️⃣ Submit Assignment
     @Override
     public void submitAssignment(Long studentId, SubmitAssignmentRequest request) {
 
@@ -131,7 +124,6 @@ public class AssignmentServiceImpl implements AssignmentService {
         submissionRepository.save(submission);
     }
 
-    // 4️⃣ Grade Assignment
     @Override
     public void gradeAssignment(Long submissionId, GradeAssignmentRequest request) {
 
@@ -145,7 +137,6 @@ public class AssignmentServiceImpl implements AssignmentService {
         submissionRepository.save(submission);
     }
 
-    // 5️⃣ Get Submissions by Assignment
     @Override
     public List<AssignmentSubmissionResponse> getSubmissionsByAssignment(Long assignmentId) {
 
@@ -162,8 +153,6 @@ public class AssignmentServiceImpl implements AssignmentService {
                 ))
                 .toList();
     }
-
-    // 6️⃣ Student Assignment Summary
     @Override
     public StudentAssignmentSummaryResponse getStudentAssignmentSummary(Long studentId) {
 

@@ -2,7 +2,6 @@ package com.example.demo.LearningManagementSystem.service;
 
 import com.example.demo.LearningManagementSystem.DTO.StudentCourseProgressResponse;
 
-
 import com.example.demo.LearningManagementSystem.Model.StudentCourseProgress;
 
 import com.example.demo.LearningManagementSystem.repository.StudentCourseProgressRepository;
@@ -34,7 +33,6 @@ public class StudentProgressServiceImpl implements StudentProgressService {
 
     @Override
     public void updateProgress(Long studentId, Long lessonMaterialId) {
-        // Business logic placeholder
-        // Update completed lessons & recalculate percentage
+        
     }
 }

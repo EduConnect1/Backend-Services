@@ -32,7 +32,7 @@ public class AttendanceServiceImpl implements AttendanceService {
     private final TeacherRepository teacherRepository;
     private final StudentRepository studentRepository;
 
-    // 1️⃣ Create Attendance Session
+    
     @Override
     public AttendanceSessionResponse createAttendanceSession(CreateAttendanceSessionRequest request) {
 
@@ -74,7 +74,7 @@ public class AttendanceServiceImpl implements AttendanceService {
         );
     }
 
-    // 2️⃣ Mark Attendance
+    
     @Override
     public void markAttendance(Long sessionId, List<MarkAttendanceRequest> requests) {
 
@@ -104,7 +104,7 @@ public class AttendanceServiceImpl implements AttendanceService {
         }
     }
 
-    // 3️⃣ Get Attendance by Session
+    
     @Override
     public List<AttendanceRecordResponse> getAttendanceBySession(Long sessionId) {
 
@@ -123,7 +123,7 @@ public class AttendanceServiceImpl implements AttendanceService {
                 .toList();
     }
 
-    // 4️⃣ Student Attendance Summary
+    
     @Override
     public StudentAttendanceSummaryResponse getStudentAttendanceSummary(
             Long studentId,
@@ -152,7 +152,6 @@ public class AttendanceServiceImpl implements AttendanceService {
         );
     }
 
-    // 5️⃣ Class Attendance Summary
     @Override
     public ClassAttendanceSummaryResponse getClassAttendanceSummary(Long classId) {
 

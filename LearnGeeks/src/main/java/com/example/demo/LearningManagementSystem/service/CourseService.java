@@ -1,7 +1,5 @@
 package com.example.demo.LearningManagementSystem.service;
 
-
-
 import com.example.demo.LearningManagementSystem.DTO.CreateCourseRequest;
 import com.example.demo.LearningManagementSystem.DTO.CourseResponse;
 

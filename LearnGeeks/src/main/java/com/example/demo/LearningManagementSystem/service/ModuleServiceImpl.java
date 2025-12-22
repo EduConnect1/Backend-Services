@@ -9,7 +9,7 @@ import com.example.demo.LearningManagementSystem.Model.Course;
 import com.example.demo.LearningManagementSystem.Model.Module;
 import com.example.demo.LearningManagementSystem.repository.CourseRepository;
 import com.example.demo.LearningManagementSystem.repository.ModuleRepository;
-// import com.example.demo.LearningManagementSystem.service.ModuleService;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

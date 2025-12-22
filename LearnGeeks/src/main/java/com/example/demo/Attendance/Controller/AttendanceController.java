@@ -19,7 +19,6 @@ public class AttendanceController {
 
     private final AttendanceService attendanceService;
 
-    // 1️⃣ Create Attendance Session (Teacher/Admin)
     @PostMapping("/sessions")
     public ResponseEntity<AttendanceSessionResponse> createSession(
             @Valid @RequestBody CreateAttendanceSessionRequest request
@@ -29,7 +28,6 @@ public class AttendanceController {
                 .body(attendanceService.createAttendanceSession(request));
     }
 
-    // 2️⃣ Mark Attendance (Teacher/Admin)
     @PostMapping("/sessions/{sessionId}/mark")
     public ResponseEntity<Void> markAttendance(
             @PathVariable Long sessionId,
@@ -39,7 +37,6 @@ public class AttendanceController {
         return ResponseEntity.ok().build();
     }
 
-    // 3️⃣ View Attendance by Session (Teacher/Admin)
     @GetMapping("/sessions/{sessionId}")
     public ResponseEntity<List<AttendanceRecordResponse>> getAttendanceBySession(
             @PathVariable Long sessionId
@@ -49,7 +46,6 @@ public class AttendanceController {
         );
     }
 
-    // 4️⃣ Student Attendance Summary (Student/Parent/Admin)
     @GetMapping("/students/{studentId}/summary")
     public ResponseEntity<StudentAttendanceSummaryResponse> getStudentSummary(
             @PathVariable Long studentId,
@@ -61,7 +57,6 @@ public class AttendanceController {
         );
     }
 
-    // 5️⃣ Class Attendance Summary (Admin)
     @GetMapping("/classes/{classId}/summary")
     public ResponseEntity<ClassAttendanceSummaryResponse> getClassSummary(
             @PathVariable Long classId

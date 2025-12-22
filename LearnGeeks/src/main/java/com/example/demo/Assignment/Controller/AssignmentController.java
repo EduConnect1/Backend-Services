@@ -1,7 +1,5 @@
 package com.example.demo.Assignment.Controller;
 
-
-
 import com.example.demo.Assignment.DTO.*;
 import com.example.demo.Assignment.service.AssignmentService;
 import jakarta.validation.Valid;
@@ -19,7 +17,7 @@ public class AssignmentController {
 
     private final AssignmentService assignmentService;
 
-    // 1️⃣ Create Assignment (Teacher/Admin)
+    
     @PostMapping
     public ResponseEntity<AssignmentResponse> createAssignment(
             @Valid @RequestBody CreateAssignmentRequest request
@@ -29,7 +27,6 @@ public class AssignmentController {
                 .body(assignmentService.createAssignment(request));
     }
 
-    // 2️⃣ Get Assignments by Subject (Teacher/Student)
     @GetMapping("/subject/{subjectId}")
     public ResponseEntity<List<AssignmentResponse>> getAssignmentsBySubject(
             @PathVariable Long subjectId
@@ -39,7 +36,6 @@ public class AssignmentController {
         );
     }
 
-    // 3️⃣ Submit Assignment (Student)
     @PostMapping("/submit/{studentId}")
     public ResponseEntity<Void> submitAssignment(
             @PathVariable Long studentId,
@@ -49,7 +45,6 @@ public class AssignmentController {
         return ResponseEntity.ok().build();
     }
 
-    // 4️⃣ Grade Assignment (Teacher)
     @PutMapping("/grade/{submissionId}")
     public ResponseEntity<Void> gradeAssignment(
             @PathVariable Long submissionId,
@@ -59,7 +54,6 @@ public class AssignmentController {
         return ResponseEntity.ok().build();
     }
 
-    // 5️⃣ View Submissions for Assignment (Teacher/Admin)
     @GetMapping("/{assignmentId}/submissions")
     public ResponseEntity<List<AssignmentSubmissionResponse>> getSubmissions(
             @PathVariable Long assignmentId
@@ -69,7 +63,6 @@ public class AssignmentController {
         );
     }
 
-    // 6️⃣ Student Assignment Analytics (Student/Parent/Admin)
     @GetMapping("/students/{studentId}/summary")
     public ResponseEntity<StudentAssignmentSummaryResponse> getStudentSummary(
             @PathVariable Long studentId
