@@ -1,5 +1,10 @@
 package com.example.demo.ResultManagement.DTO;
 
-public class ReportCardResponse {
-    
-}
+import java.util.List;
+
+public record ReportCardResponse(
+        Long studentId,
+        String term,
+        int year,
+        List<ExamResultResponse> results
+) {}
