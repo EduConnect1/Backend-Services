@@ -1,5 +1,9 @@
 package com.example.demo.OnlineExam.Model;
 
-public class QuestionType {
-    
+
+
+public enum QuestionType {
+    MCQ,
+    TRUE_FALSE,
+    SHORT_ANSWER
 }
