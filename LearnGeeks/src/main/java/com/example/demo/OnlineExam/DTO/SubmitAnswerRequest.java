@@ -1,5 +1,15 @@
 package com.example.demo.OnlineExam.DTO;
 
-public class SubmitAnswerRequest {
-    
+import jakarta.validation.constraints.NotNull;
+
+public record SubmitAnswerRequest(
+
+        @NotNull
+        Long attemptId,
+
+        @NotNull
+        Long questionId,
+
+        String answer
+) {
 }

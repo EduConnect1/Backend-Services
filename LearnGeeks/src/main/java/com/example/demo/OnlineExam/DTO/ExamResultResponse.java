@@ -1,5 +1,12 @@
 package com.example.demo.OnlineExam.DTO;
 
-public class ExamResultResponse {
-    
+
+
+public record ExamResultResponse(
+
+        Long studentId,
+        Long examId,
+        int score,
+        boolean passed
+) {
 }
