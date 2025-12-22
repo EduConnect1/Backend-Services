@@ -1,5 +1,10 @@
 package com.example.demo.OnlineExam.DTO;
 
-public class OptionResponse {
-    
+
+
+public record OptionResponse(
+
+        Long id,
+        String optionText
+) {
 }
