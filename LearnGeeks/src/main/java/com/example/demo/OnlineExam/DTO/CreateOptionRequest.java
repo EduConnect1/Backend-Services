@@ -1,5 +1,8 @@
 package com.example.demo.OnlineExam.DTO;
 
-public class CreateOptionRequest {
-    
-}
+
+public record CreateOptionRequest(
+        Long questionId,
+        String optionText,
+        Boolean correct
+) {}
