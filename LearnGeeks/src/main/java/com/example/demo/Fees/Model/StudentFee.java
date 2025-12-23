@@ -1,7 +1,5 @@
 package com.example.demo.Fees.Model;
 
-
-
 import com.example.demo.SchoolStructure.Model.Student;
 import jakarta.persistence.*;
 import lombok.*;
