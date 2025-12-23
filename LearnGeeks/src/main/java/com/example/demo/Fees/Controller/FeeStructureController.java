@@ -16,9 +16,6 @@ public class FeeStructureController {
 
     private final FeeStructureService feeStructureService;
 
-    /**
-     * Admin only
-     */
     @PostMapping
     public ResponseEntity<Long> createFeeStructure(
             @RequestBody FeeStructureRequest request) {
