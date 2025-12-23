@@ -1,5 +1,10 @@
 package com.example.demo.Fees.DTO;
 
-public class PaymentRequest {
-    
-}
+import java.time.LocalDateTime;
+
+public record PaymentRequest(
+        Long studentId,
+        Double amount,
+        LocalDateTime paymentDate,
+        String method
+) {}
