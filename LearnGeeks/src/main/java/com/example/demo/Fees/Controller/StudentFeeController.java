@@ -1,7 +1,5 @@
 package com.example.demo.Fees.Controller;
 
-
-
 import com.example.demo.Fees.DTO.StudentFeeRequest;
 import com.example.demo.Fees.DTO.StudentFeeResponse;
 import com.example.demo.Fees.Service.StudentFeeService;
@@ -18,9 +16,6 @@ public class StudentFeeController {
 
     private final StudentFeeService studentFeeService;
 
-    /**
-     * Admin only
-     */
     @PostMapping("/{studentId}/fees")
     public ResponseEntity<Void> assignFeeToStudent(
             @PathVariable Long studentId,
