@@ -1,5 +1,11 @@
 package com.example.demo.Fees.DTO;
 
-public class StudentFeeResponse {
-    
-}
+public record StudentFeeResponse(
+        Long id,
+        Long studentId,
+        Long feeStructureId,
+        Double amountDue,
+        Double amountPaid,
+        Boolean fullyPaid
+) {}
+
