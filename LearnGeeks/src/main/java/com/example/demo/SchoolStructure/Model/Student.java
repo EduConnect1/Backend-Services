@@ -26,11 +26,7 @@ public class Student {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "class_id", nullable = false)
     private SchoolClass schoolClass;
-    
-    /**
-     * Gets the full name of the student by combining first and last name from the associated user
-     * @return Full name of the student or "Unknown" if user is null
-     */
+
     public String getFullName() {
         if (user == null) {
             return "Unknown";

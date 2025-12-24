@@ -5,8 +5,6 @@ import com.example.demo.SchoolStructure.DTO.ClassDTO.ClassResponse;
 import com.example.demo.SchoolStructure.Model.SchoolClass;
 import com.example.demo.SchoolStructure.service.SchoolClassService;
 
-
-
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

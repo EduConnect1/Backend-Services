@@ -1,7 +1,5 @@
 package com.example.demo.OnlineExam.Model;
 
-
-
 import jakarta.persistence.*;
 import lombok.*;
 

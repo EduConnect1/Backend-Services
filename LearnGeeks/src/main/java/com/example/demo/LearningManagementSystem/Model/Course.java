@@ -1,7 +1,5 @@
 package com.example.demo.LearningManagementSystem.Model;
 
-
-
 import com.example.demo.SchoolStructure.Model.Teacher;
 import jakarta.persistence.*;
 import lombok.*;

@@ -6,7 +6,7 @@ import com.example.demo.LearningManagementSystem.Model.Course;
 import com.example.demo.LearningManagementSystem.repository.CourseRepository;
 import com.example.demo.SchoolStructure.Model.Teacher;
 import com.example.demo.SchoolStructure.repository.TeacherRepository;
-// import com.example.demo.LearningManagementSystem.service.CourseService;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

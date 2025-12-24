@@ -1,6 +1,5 @@
 package com.example.demo.OnlineExam.repository;
 
-
 import com.example.demo.OnlineExam.Model.Option;
 import org.springframework.data.jpa.repository.JpaRepository;
 

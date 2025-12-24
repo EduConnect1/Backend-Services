@@ -7,7 +7,7 @@ import com.example.demo.OnlineExam.DTO.SubmitAnswerRequest;
 import com.example.demo.OnlineExam.Model.*;
 import com.example.demo.OnlineExam.repository.*;
 import com.example.demo.SchoolStructure.repository.StudentRepository;
-import com.example.demo.SchoolStructure.Model.Student;
+
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -28,24 +28,37 @@ public class ExamAttemptServiceImpl implements ExamAttemptService {
     private final ExamRepository examRepository;
 
     @Override
-    public Long startExam(StartExamRequest request) {
+public Long startExam(StartExamRequest request) {
 
-        Student student = studentRepository.findById(request.studentId())
-                .orElseThrow(() -> new RuntimeException("Student not found"));
+    studentRepository.findById(request.studentId())
+            .orElseThrow(() -> new RuntimeException("Student not found"));
 
-        Exam exam = examRepository.findById(request.examId())
-                .orElseThrow(() -> new RuntimeException("Exam not found"));
+    examRepository.findById(request.examId())
+            .orElseThrow(() -> new RuntimeException("Exam not found"));
 
-        StudentExamAttempt attempt = StudentExamAttempt.builder()
-                .student(student)
-                .exam(exam)
-                .startTime(LocalDateTime.now())
-                .submitted(false)
-                .score(0)
-                .build();
+    
+    attemptRepository.findByStudentIdAndExamId(
+            request.studentId(),
+            request.examId()
+    ).ifPresent(a -> {
+        throw new RuntimeException("You have already attempted this exam");
+    });
 
-        return attemptRepository.save(attempt).getId();
-    }
+    StudentExamAttempt attempt = StudentExamAttempt.builder()
+            .student(
+                studentRepository.getReferenceById(request.studentId())
+            )
+            .exam(
+                examRepository.getReferenceById(request.examId())
+            )
+            .startTime(LocalDateTime.now())
+            .submitted(false)
+            .score(0)
+            .build();
+
+    return attemptRepository.save(attempt).getId();
+}
+
 
     @Override
     public void submitAnswer(SubmitAnswerRequest request) {

@@ -19,7 +19,7 @@ public class LessonMaterial {
     private String title;
 
     @Column(nullable = false)
-    private String contentUrl; // PDF/video link
+    private String contentUrl; 
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "module_id")
