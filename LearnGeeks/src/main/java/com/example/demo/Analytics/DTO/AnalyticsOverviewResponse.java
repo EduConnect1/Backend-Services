@@ -1,5 +1,9 @@
 package com.example.demo.Analytics.DTO;
 
-public class AnalyticsOverviewResponse {
-    
-}
+public record AnalyticsOverviewResponse(
+
+        long totalStudents,
+        double averageAttendanceRate,
+        double assignmentCompletionRate,
+        double courseCompletionRate
+) {}
