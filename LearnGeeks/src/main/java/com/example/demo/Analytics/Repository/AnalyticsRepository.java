@@ -40,7 +40,7 @@ public interface AnalyticsRepository {
         GROUP BY a.date
         ORDER BY a.date
     """)
-    List<Object[]> attendanceHeatmap(Long classId);
+    List<Object[]> AttendanceHeatMap(Long classId);
 
 
     @Query("""
