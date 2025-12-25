@@ -24,7 +24,7 @@ public class Message {
     private Long senderId;
 
     @Column(name = "sender_role", nullable = false)
-    private String senderRole; // PARENT or TEACHER
+    private String senderRole; 
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
