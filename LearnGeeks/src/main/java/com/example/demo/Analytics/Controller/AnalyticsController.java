@@ -22,7 +22,7 @@ public class AnalyticsController {
     }
 
     @GetMapping("/attendance/heatmap")
-    public List<AttendanceHeatmapResponse> attendanceHeatmap(
+    public List<AttendanceHeatMapResponse> attendanceHeatmap(
             @RequestParam Long classId) {
 
         return analyticsService.getAttendanceHeatmap(classId);
