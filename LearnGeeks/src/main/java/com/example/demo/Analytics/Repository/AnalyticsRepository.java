@@ -1,26 +1,35 @@
 package com.example.demo.Analytics.Repository;
 
+import com.example.demo.Analytics.Model.Analytics;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface AnalyticsRepository {
+public interface AnalyticsRepository extends JpaRepository<Analytics, Long> {
 
 
     @Query("SELECT COUNT(s.id) FROM Student s")
     long countStudents();
 
-    @Query("""
-        SELECT AVG(a.presentPercentage)
-        FROM AttendanceSummary a
-    """)
-    Double averageAttendanceRate();
+    @Query("SELECT COUNT(ar.id) FROM AttendanceRecord ar WHERE ar.status = 'PRESENT'")
+    Long countPresentRecords();
+
+    @Query("SELECT COUNT(ar.id) FROM AttendanceRecord ar")
+    Long countTotalAttendanceRecords();
+
+    default Double averageAttendanceRate() {
+        Long total = countTotalAttendanceRecords();
+        if (total == null || total == 0) return 0.0;
+        Long present = countPresentRecords();
+        return (present * 100.0) / total;
+    }
 
     @Query("""
         SELECT
-        (COUNT(sub.id) * 1.0 / COUNT(a.id)) * 100
+        (COUNT(sub.id) * 1.0 / NULLIF(COUNT(a.id), 0)) * 100
         FROM Assignment a
         LEFT JOIN AssignmentSubmission sub ON sub.assignment.id = a.id
     """)
@@ -34,24 +43,28 @@ public interface AnalyticsRepository {
 
 
     @Query("""
-        SELECT a.date, AVG(a.presentPercentage)
-        FROM AttendanceSummary a
-        WHERE a.classId = :classId
-        GROUP BY a.date
-        ORDER BY a.date
+        SELECT asess.attendanceDate, 
+               (SUM(CASE WHEN ar.status = 'PRESENT' THEN 1.0 ELSE 0.0 END) / COUNT(ar.id)) * 100
+        FROM AttendanceSession asess
+        JOIN AttendanceRecord ar ON ar.attendanceSession.id = asess.id
+        WHERE asess.schoolClass.id = :classId
+        GROUP BY asess.attendanceDate
+        ORDER BY asess.attendanceDate
     """)
     List<Object[]> AttendanceHeatMap(Long classId);
 
 
     @Query("""
-        SELECT s.id, s.fullName,
-               AVG(a.presentPercentage),
+        SELECT s.id, 
+               s.user.firstName, 
+               s.user.lastName,
+               (SUM(CASE WHEN ar.status = 'PRESENT' THEN 1.0 ELSE 0.0 END) / COUNT(ar.id)) * 100,
                AVG(p.completionPercentage)
         FROM Student s
-        JOIN AttendanceSummary a ON a.studentId = s.id
-        JOIN StudentCourseProgress p ON p.student.id = s.id
-        GROUP BY s.id, s.fullName
-        HAVING AVG(a.presentPercentage) < :threshold
+        JOIN AttendanceRecord ar ON ar.student.id = s.id
+        LEFT JOIN StudentCourseProgress p ON p.student.id = s.id
+        GROUP BY s.id, s.user.firstName, s.user.lastName
+        HAVING (SUM(CASE WHEN ar.status = 'PRESENT' THEN 1.0 ELSE 0.0 END) / COUNT(ar.id)) * 100 < :threshold
     """)
     List<Object[]> atRiskStudents(double threshold);
 

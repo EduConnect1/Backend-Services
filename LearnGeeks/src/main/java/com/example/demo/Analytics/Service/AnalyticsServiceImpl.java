@@ -46,9 +46,9 @@ public class AnalyticsServiceImpl implements AnalyticsService {
                 .stream()
                 .map(r -> new AtRiskStudentResponse(
                         (Long) r[0],
-                        (String) r[1],
-                        (Double) r[2],
-                        (Double) r[3]
+                        (String) r[1] + " " + (String) r[2],
+                        (Double) r[3],
+                        (Double) r[4]
                 ))
                 .toList();
     }
