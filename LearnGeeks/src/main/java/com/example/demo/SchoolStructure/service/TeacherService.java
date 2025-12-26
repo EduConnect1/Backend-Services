@@ -1,6 +1,6 @@
-package com.example.demo.SchoolStructure.service;
+﻿package com.example.demo.schoolstructure.service;
 
-import com.example.demo.SchoolStructure.Model.Teacher;
+import com.example.demo.schoolstructure.model.Teacher;
 import java.util.Set;
 
 public interface TeacherService {

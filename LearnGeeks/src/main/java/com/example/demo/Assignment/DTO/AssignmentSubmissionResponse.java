@@ -1,5 +1,5 @@
-package com.example.demo.Assignment.DTO;
-import com.example.demo.Assignment.Model.AssignmentStatus;
+﻿package com.example.demo.assignment.dto;
+import com.example.demo.assignment.model.AssignmentStatus;
 import java.time.LocalDateTime;
 
 public record AssignmentSubmissionResponse(

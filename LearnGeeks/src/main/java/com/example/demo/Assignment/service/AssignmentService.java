@@ -1,11 +1,11 @@
-package com.example.demo.Assignment.service;
+﻿package com.example.demo.assignment.service;
 
-import com.example.demo.Assignment.DTO.AssignmentResponse;
-import com.example.demo.Assignment.DTO.CreateAssignmentRequest;
-import com.example.demo.Assignment.DTO.SubmitAssignmentRequest;
-import com.example.demo.Assignment.DTO.GradeAssignmentRequest;
-import com.example.demo.Assignment.DTO.AssignmentSubmissionResponse;
-import com.example.demo.Assignment.DTO.StudentAssignmentSummaryResponse;
+import com.example.demo.assignment.dto.AssignmentResponse;
+import com.example.demo.assignment.dto.CreateAssignmentRequest;
+import com.example.demo.assignment.dto.SubmitAssignmentRequest;
+import com.example.demo.assignment.dto.GradeAssignmentRequest;
+import com.example.demo.assignment.dto.AssignmentSubmissionResponse;
+import com.example.demo.assignment.dto.StudentAssignmentSummaryResponse;
 
 import java.util.List;
 

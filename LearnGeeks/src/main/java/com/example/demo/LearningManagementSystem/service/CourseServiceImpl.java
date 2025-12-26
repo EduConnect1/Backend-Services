@@ -1,11 +1,11 @@
-package com.example.demo.LearningManagementSystem.service;
+﻿package com.example.demo.learningmanagementsystem.service;
 
-import com.example.demo.LearningManagementSystem.DTO.CourseResponse;
-import com.example.demo.LearningManagementSystem.DTO.CreateCourseRequest;
-import com.example.demo.LearningManagementSystem.Model.Course;
-import com.example.demo.LearningManagementSystem.repository.CourseRepository;
-import com.example.demo.SchoolStructure.Model.Teacher;
-import com.example.demo.SchoolStructure.repository.TeacherRepository;
+import com.example.demo.learningmanagementsystem.dto.CourseResponse;
+import com.example.demo.learningmanagementsystem.dto.CreateCourseRequest;
+import com.example.demo.learningmanagementsystem.model.Course;
+import com.example.demo.learningmanagementsystem.repository.CourseRepository;
+import com.example.demo.schoolstructure.model.Teacher;
+import com.example.demo.schoolstructure.repository.TeacherRepository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,5 +1,5 @@
-package com.example.demo.Attendance.repository;
-import com.example.demo.Attendance.model.AttendanceSession;
+﻿package com.example.demo.attendance.repository;
+import com.example.demo.attendance.model.AttendanceSession;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.time.LocalDate;
 import java.util.List;

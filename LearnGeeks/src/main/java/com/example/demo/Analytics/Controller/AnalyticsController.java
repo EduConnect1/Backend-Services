@@ -1,8 +1,8 @@
-package com.example.demo.Analytics.Controller;
+﻿package com.example.demo.analytics.controller;
 
 
-import com.example.demo.Analytics.DTO.*;
-import com.example.demo.Analytics.Service.AnalyticsService;
+import com.example.demo.analytics.dto.*;
+import com.example.demo.analytics.service.AnalyticsService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

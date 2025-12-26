@@ -1,7 +1,7 @@
-package com.example.demo.Communication.Service;
+﻿package com.example.demo.communication.service;
 
-import com.example.demo.Communication.Model.Conversation;
-import com.example.demo.Communication.Repository.ConversationRepository;
+import com.example.demo.communication.model.Conversation;
+import com.example.demo.communication.repository.ConversationRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

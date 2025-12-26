@@ -1,6 +1,6 @@
-package com.example.demo.OnlineExam.DTO;
+﻿package com.example.demo.onlineexam.dto;
 
-import com.example.demo.OnlineExam.Model.QuestionType;
+import com.example.demo.onlineexam.model.QuestionType;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 

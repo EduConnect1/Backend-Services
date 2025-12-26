@@ -1,9 +1,9 @@
-package com.example.demo.SchoolStructure.controller;
+﻿package com.example.demo.schoolstructure.controller;
 
-import com.example.demo.SchoolStructure.DTO.StudentDTO.CreateStudentRequest;
-import com.example.demo.SchoolStructure.DTO.StudentDTO.StudentResponse;
-import com.example.demo.SchoolStructure.Model.Student;
-import com.example.demo.SchoolStructure.service.StudentService;
+import com.example.demo.schoolstructure.dto.studentdto.CreateStudentRequest;
+import com.example.demo.schoolstructure.dto.studentdto.StudentResponse;
+import com.example.demo.schoolstructure.model.Student;
+import com.example.demo.schoolstructure.service.StudentService;
 import com.example.demo.auth.entity.User;
 import com.example.demo.auth.repository.UserRepository;
 import jakarta.validation.Valid;

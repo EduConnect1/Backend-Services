@@ -1,6 +1,6 @@
-package com.example.demo.Communication.Service;
+﻿package com.example.demo.communication.service;
 
-import com.example.demo.Communication.Model.Announcement;
+import com.example.demo.communication.model.Announcement;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

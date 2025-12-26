@@ -1,4 +1,4 @@
-package com.example.demo.SchoolStructure.Model;
+﻿package com.example.demo.schoolstructure.model;
 
 import jakarta.persistence.*;
 import lombok.*;

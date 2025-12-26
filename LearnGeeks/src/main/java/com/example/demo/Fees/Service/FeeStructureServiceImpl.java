@@ -1,12 +1,12 @@
-package com.example.demo.Fees.Service;
+﻿package com.example.demo.fees.service;
 
-import com.example.demo.Fees.DTO.FeeStructureRequest;
-import com.example.demo.Fees.DTO.FeeStructureResponse;
-import com.example.demo.Fees.Model.FeeStructure;
-import com.example.demo.Fees.Repository.FeeStructureRepository;
+import com.example.demo.fees.dto.FeeStructureRequest;
+import com.example.demo.fees.dto.FeeStructureResponse;
+import com.example.demo.fees.model.FeeStructure;
+import com.example.demo.fees.repository.FeeStructureRepository;
 
-import com.example.demo.SchoolStructure.Model.SchoolClass;
-import com.example.demo.SchoolStructure.repository.SchoolClassRepository;
+import com.example.demo.schoolstructure.model.SchoolClass;
+import com.example.demo.schoolstructure.repository.SchoolClassRepository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

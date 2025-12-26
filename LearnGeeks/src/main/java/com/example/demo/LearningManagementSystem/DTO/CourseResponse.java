@@ -1,4 +1,4 @@
-package com.example.demo.LearningManagementSystem.DTO;
+﻿package com.example.demo.learningmanagementsystem.dto;
 import java.time.LocalDateTime;
 import java.util.List;
 

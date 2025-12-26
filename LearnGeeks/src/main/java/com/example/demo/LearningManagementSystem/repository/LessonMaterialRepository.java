@@ -1,6 +1,6 @@
-package com.example.demo.LearningManagementSystem.repository;
+﻿package com.example.demo.learningmanagementsystem.repository;
 
-import com.example.demo.LearningManagementSystem.Model.LessonMaterial;
+import com.example.demo.learningmanagementsystem.model.LessonMaterial;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

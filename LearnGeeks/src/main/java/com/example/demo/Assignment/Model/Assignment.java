@@ -1,6 +1,6 @@
-package com.example.demo.Assignment.Model;
-import com.example.demo.SchoolStructure.Model.Teacher;
-import com.example.demo.SchoolStructure.Model.Subject;
+﻿package com.example.demo.assignment.model;
+import com.example.demo.schoolstructure.model.Teacher;
+import com.example.demo.schoolstructure.model.Subject;
 import jakarta.persistence.*;
 import lombok.*;
 

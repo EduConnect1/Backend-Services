@@ -1,6 +1,6 @@
-package com.example.demo.SchoolStructure.service;
+﻿package com.example.demo.schoolstructure.service;
 
-import com.example.demo.SchoolStructure.Model.Parent;
+import com.example.demo.schoolstructure.model.Parent;
 import java.util.List;
 
 public interface ParentService {

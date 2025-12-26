@@ -1,7 +1,7 @@
-package com.example.demo.LearningManagementSystem.controller;
-import com.example.demo.LearningManagementSystem.DTO.CreateLessonMaterialRequest;
-import com.example.demo.LearningManagementSystem.DTO.LessonMaterialResponse;
-import com.example.demo.LearningManagementSystem.service.LessonMaterialService;
+﻿package com.example.demo.learningmanagementsystem.controller;
+import com.example.demo.learningmanagementsystem.dto.CreateLessonMaterialRequest;
+import com.example.demo.learningmanagementsystem.dto.LessonMaterialResponse;
+import com.example.demo.learningmanagementsystem.service.LessonMaterialService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

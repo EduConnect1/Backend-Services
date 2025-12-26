@@ -1,10 +1,10 @@
-package com.example.demo.OnlineExam.service;
+﻿package com.example.demo.onlineexam.service;
 
-import com.example.demo.OnlineExam.DTO.CreateOptionRequest;
-import com.example.demo.OnlineExam.Model.Option;
-import com.example.demo.OnlineExam.Model.Question;
-import com.example.demo.OnlineExam.repository.OptionRepository;
-import com.example.demo.OnlineExam.repository.QuestionRepository;
+import com.example.demo.onlineexam.dto.CreateOptionRequest;
+import com.example.demo.onlineexam.model.Option;
+import com.example.demo.onlineexam.model.Question;
+import com.example.demo.onlineexam.repository.OptionRepository;
+import com.example.demo.onlineexam.repository.QuestionRepository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

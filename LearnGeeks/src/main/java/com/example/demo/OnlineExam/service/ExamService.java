@@ -1,7 +1,7 @@
-package com.example.demo.OnlineExam.service;
+﻿package com.example.demo.onlineexam.service;
 
-import com.example.demo.OnlineExam.DTO.CreateExamRequest;
-import com.example.demo.OnlineExam.DTO.ExamResponse;
+import com.example.demo.onlineexam.dto.CreateExamRequest;
+import com.example.demo.onlineexam.dto.ExamResponse;
 
 import java.util.List;
 

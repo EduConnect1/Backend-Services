@@ -1,10 +1,10 @@
-package com.example.demo.Communication.Service;
+﻿package com.example.demo.communication.service;
 
-import com.example.demo.Communication.Model.Conversation;
-import com.example.demo.Communication.Model.Message;
-import com.example.demo.Communication.Repository.MessageRepository;
-// import com.example.demo.Communication.Service.ConversationService;
-// import com.example.demo.Communication.Service.MessageService;
+import com.example.demo.communication.model.Conversation;
+import com.example.demo.communication.model.Message;
+import com.example.demo.communication.repository.MessageRepository;
+// import com.example.demo.communication.service.ConversationService;
+// import com.example.demo.communication.service.MessageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

@@ -1,10 +1,10 @@
-package com.example.demo.LearningManagementSystem.service;
+﻿package com.example.demo.learningmanagementsystem.service;
 
-import com.example.demo.LearningManagementSystem.DTO.StudentCourseProgressResponse;
+import com.example.demo.learningmanagementsystem.dto.StudentCourseProgressResponse;
 
-import com.example.demo.LearningManagementSystem.Model.StudentCourseProgress;
+import com.example.demo.learningmanagementsystem.model.StudentCourseProgress;
 
-import com.example.demo.LearningManagementSystem.repository.StudentCourseProgressRepository;
+import com.example.demo.learningmanagementsystem.repository.StudentCourseProgressRepository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

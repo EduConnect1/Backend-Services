@@ -1,6 +1,6 @@
-package com.example.demo.LearningManagementSystem.service;
+﻿package com.example.demo.learningmanagementsystem.service;
 
-import com.example.demo.LearningManagementSystem.DTO.StudentCourseProgressResponse;
+import com.example.demo.learningmanagementsystem.dto.StudentCourseProgressResponse;
 
 public interface StudentProgressService {
 

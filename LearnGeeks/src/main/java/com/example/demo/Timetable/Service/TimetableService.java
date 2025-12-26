@@ -1,7 +1,7 @@
-package com.example.demo.Timetable.Service;
+﻿package com.example.demo.timetable.service;
 
-import com.example.demo.Timetable.DTO.TimetableSessionRequest;
-import com.example.demo.Timetable.DTO.TimetableSessionResponse;
+import com.example.demo.timetable.dto.TimetableSessionRequest;
+import com.example.demo.timetable.dto.TimetableSessionResponse;
 
 import java.util.List;
 

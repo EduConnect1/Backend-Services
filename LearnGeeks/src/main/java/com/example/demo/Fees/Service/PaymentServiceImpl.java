@@ -1,13 +1,13 @@
-package com.example.demo.Fees.Service;
-import com.example.demo.Fees.DTO.PaymentRequest;
-import com.example.demo.Fees.DTO.PaymentResponse;
-import com.example.demo.Fees.Model.Payment;
-import com.example.demo.Fees.Model.StudentFee;
-import com.example.demo.Fees.Repository.PaymentRepository;
-import com.example.demo.Fees.Repository.StudentFeeRepository;
+﻿package com.example.demo.fees.service;
+import com.example.demo.fees.dto.PaymentRequest;
+import com.example.demo.fees.dto.PaymentResponse;
+import com.example.demo.fees.model.Payment;
+import com.example.demo.fees.model.StudentFee;
+import com.example.demo.fees.repository.PaymentRepository;
+import com.example.demo.fees.repository.StudentFeeRepository;
 
-import com.example.demo.SchoolStructure.Model.Student;
-import com.example.demo.SchoolStructure.repository.StudentRepository;
+import com.example.demo.schoolstructure.model.Student;
+import com.example.demo.schoolstructure.repository.StudentRepository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

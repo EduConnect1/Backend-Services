@@ -1,4 +1,4 @@
-package com.example.demo.Attendance.DTO;
+﻿package com.example.demo.attendance.dto;
 
 import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;

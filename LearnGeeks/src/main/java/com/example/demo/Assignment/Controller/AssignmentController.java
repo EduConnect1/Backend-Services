@@ -1,7 +1,7 @@
-package com.example.demo.Assignment.Controller;
+﻿package com.example.demo.assignment.controller;
 
-import com.example.demo.Assignment.DTO.*;
-import com.example.demo.Assignment.service.AssignmentService;
+import com.example.demo.assignment.dto.*;
+import com.example.demo.assignment.service.AssignmentService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

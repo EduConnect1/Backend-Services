@@ -1,5 +1,5 @@
-package com.example.demo.Assignment.repository;
-import com.example.demo.Assignment.Model.Assignment;
+﻿package com.example.demo.assignment.repository;
+import com.example.demo.assignment.model.Assignment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

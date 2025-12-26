@@ -1,4 +1,4 @@
-package com.example.demo.LearningManagementSystem.DTO;
+﻿package com.example.demo.learningmanagementsystem.dto;
 
 public record LessonMaterialResponse(
         Long id,

@@ -1,4 +1,4 @@
-package com.example.demo.OnlineExam.Model;
+﻿package com.example.demo.onlineexam.model;
 public enum QuestionType {
     MCQ,
     TRUE_FALSE,

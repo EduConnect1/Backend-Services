@@ -1,6 +1,6 @@
-package com.example.demo.LearningManagementSystem.Model;
+﻿package com.example.demo.learningmanagementsystem.model;
 
-import com.example.demo.SchoolStructure.Model.Teacher;
+import com.example.demo.schoolstructure.model.Teacher;
 import jakarta.persistence.*;
 import lombok.*;
 

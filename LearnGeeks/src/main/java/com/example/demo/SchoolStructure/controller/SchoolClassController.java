@@ -1,9 +1,9 @@
-package com.example.demo.SchoolStructure.controller;
+﻿package com.example.demo.schoolstructure.controller;
 
-import com.example.demo.SchoolStructure.DTO.ClassDTO.CreateClassRequest;
-import com.example.demo.SchoolStructure.DTO.ClassDTO.ClassResponse;
-import com.example.demo.SchoolStructure.Model.SchoolClass;
-import com.example.demo.SchoolStructure.service.SchoolClassService;
+import com.example.demo.schoolstructure.dto.classdto.CreateClassRequest;
+import com.example.demo.schoolstructure.dto.classdto.ClassResponse;
+import com.example.demo.schoolstructure.model.SchoolClass;
+import com.example.demo.schoolstructure.service.SchoolClassService;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

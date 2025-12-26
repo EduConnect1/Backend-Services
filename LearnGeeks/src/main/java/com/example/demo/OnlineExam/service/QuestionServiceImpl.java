@@ -1,12 +1,12 @@
-package com.example.demo.OnlineExam.service;
+﻿package com.example.demo.onlineexam.service;
 
-import com.example.demo.OnlineExam.repository.*;
+import com.example.demo.onlineexam.repository.*;
 
-import com.example.demo.OnlineExam.DTO.*;
+import com.example.demo.onlineexam.dto.*;
 
-import com.example.demo.OnlineExam.Model.*;
+import com.example.demo.onlineexam.model.*;
 
-import com.example.demo.OnlineExam.service.QuestionServiceImpl;
+import com.example.demo.onlineexam.service.QuestionServiceImpl;
 
 import java.util.List;
 

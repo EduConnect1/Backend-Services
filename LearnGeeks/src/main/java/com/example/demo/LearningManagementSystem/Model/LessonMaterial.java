@@ -1,4 +1,4 @@
-package com.example.demo.LearningManagementSystem.Model;
+﻿package com.example.demo.learningmanagementsystem.model;
 
 import jakarta.persistence.*;
 import lombok.*;

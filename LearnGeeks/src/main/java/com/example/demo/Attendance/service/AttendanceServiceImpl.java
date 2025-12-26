@@ -1,16 +1,16 @@
-package com.example.demo.Attendance.service;
+﻿package com.example.demo.attendance.service;
 
-import com.example.demo.Attendance.DTO.*;
-import com.example.demo.Attendance.model.*;
-import com.example.demo.Attendance.repository.*;
-import com.example.demo.SchoolStructure.Model.SchoolClass;
-import com.example.demo.SchoolStructure.Model.Student;
-import com.example.demo.SchoolStructure.Model.Subject;
-import com.example.demo.SchoolStructure.Model.Teacher;
-import com.example.demo.SchoolStructure.repository.SchoolClassRepository;
-import com.example.demo.SchoolStructure.repository.StudentRepository;
-import com.example.demo.SchoolStructure.repository.SubjectRepository;
-import com.example.demo.SchoolStructure.repository.TeacherRepository;
+import com.example.demo.attendance.dto.*;
+import com.example.demo.attendance.model.*;
+import com.example.demo.attendance.repository.*;
+import com.example.demo.schoolstructure.model.SchoolClass;
+import com.example.demo.schoolstructure.model.Student;
+import com.example.demo.schoolstructure.model.Subject;
+import com.example.demo.schoolstructure.model.Teacher;
+import com.example.demo.schoolstructure.repository.SchoolClassRepository;
+import com.example.demo.schoolstructure.repository.StudentRepository;
+import com.example.demo.schoolstructure.repository.SubjectRepository;
+import com.example.demo.schoolstructure.repository.TeacherRepository;
 
 import jakarta.persistence.EntityNotFoundException;
 

@@ -1,9 +1,9 @@
-package com.example.demo.LearningManagementSystem.service;
+﻿package com.example.demo.learningmanagementsystem.service;
 
 
 
-import com.example.demo.LearningManagementSystem.DTO.CreateModuleRequest;
-import com.example.demo.LearningManagementSystem.DTO.ModuleResponse;
+import com.example.demo.learningmanagementsystem.dto.CreateModuleRequest;
+import com.example.demo.learningmanagementsystem.dto.ModuleResponse;
 
 import java.util.List;
 
