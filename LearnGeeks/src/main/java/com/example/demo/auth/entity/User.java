@@ -1,6 +1,6 @@
 package com.example.demo.auth.entity;
 
-import com.example.demo.roles.entity.Role;
+import com.example.demo.auth.entity.Role;
 import jakarta.persistence.*;
 import lombok.*;
 

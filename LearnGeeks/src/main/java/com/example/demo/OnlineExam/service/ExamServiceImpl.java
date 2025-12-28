@@ -1,10 +1,10 @@
-﻿package com.example.demo.onlineexam.service;
-import com.example.demo.learningmanagementsystem.repository.*;
+package com.example.demo.onlineexam.service;
+import com.example.demo.lms.repository.*;
 import com.example.demo.onlineexam.repository.*;
 
 import com.example.demo.onlineexam.service.ExamServiceImpl;
 import com.example.demo.onlineexam.dto.*;
-import com.example.demo.learningmanagementsystem.model.*;
+import com.example.demo.lms.model.*;
 import com.example.demo.onlineexam.model.*;
 import java.util.List;
 
