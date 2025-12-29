@@ -1,6 +1,6 @@
-﻿package com.example.demo.analytics.repository;
+﻿package com.example.demo.Analytics.Repository;
 
-import com.example.demo.analytics.model.Analytics;
+import com.example.demo.Analytics.Model.Analytics;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

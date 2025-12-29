@@ -1,9 +1,9 @@
-﻿package com.example.demo.analytics.service;
+﻿package com.example.demo.Analytics.Service;
 
 
 
-import com.example.demo.analytics.dto.*;
-import com.example.demo.analytics.repository.AnalyticsRepository;
+import com.example.demo.Analytics.DTO.*;
+import com.example.demo.Analytics.Repository.AnalyticsRepository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

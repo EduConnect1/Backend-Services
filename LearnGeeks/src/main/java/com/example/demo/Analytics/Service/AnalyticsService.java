@@ -1,6 +1,6 @@
-﻿package com.example.demo.analytics.service;
+﻿package com.example.demo.Analytics.Service;
 
-import com.example.demo.analytics.dto.*;
+import com.example.demo.Analytics.DTO.*;
 
 import java.util.List;
 

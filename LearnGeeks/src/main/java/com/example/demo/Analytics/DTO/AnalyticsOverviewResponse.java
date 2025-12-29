@@ -1,6 +1,7 @@
-﻿package com.example.demo.analytics.dto;
+﻿package com.example.demo.Analytics.DTO;
 
 public record AnalyticsOverviewResponse(
+        
 
         long totalStudents,
         double averageAttendanceRate,
