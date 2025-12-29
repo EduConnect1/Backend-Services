@@ -1,4 +1,4 @@
-package com.example.demo.SchoolStructure.DTO.ClassDTO;
+﻿package com.example.demo.schoolstructure.dto.classdto;
 
 import jakarta.validation.constraints.NotBlank;
 

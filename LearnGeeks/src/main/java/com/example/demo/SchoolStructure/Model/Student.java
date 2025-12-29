@@ -1,6 +1,6 @@
-package com.example.demo.SchoolStructure.Model;
+﻿package com.example.demo.schoolstructure.model;
 
-import com.example.demo.User.Model.User;
+import com.example.demo.auth.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,8 +25,19 @@ public class Student {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "class_id", nullable = false)
-    private SchoolClass schoolClass; 
+    private SchoolClass schoolClass;
+
     public String getFullName() {
-        return user != null ? user.getFullName() : "Unknown";
+        if (user == null) {
+            return "Unknown";
+        }
+        
+        // Get first name and last name if they exist
+        String firstName = user.getFirstName() != null ? user.getFirstName() : "";
+        String lastName = user.getLastName() != null ? user.getLastName() : "";
+        
+        // Combine names, handling cases where one might be empty
+        String fullName = (firstName + " " + lastName).trim();
+        return fullName.isEmpty() ? "Unknown" : fullName;
     }
 }

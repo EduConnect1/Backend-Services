@@ -1,4 +1,4 @@
-package com.example.demo.Assignment.DTO;
+﻿package com.example.demo.assignment.dto;
 
 public record StudentAssignmentSummaryResponse(
 

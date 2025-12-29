@@ -1,6 +1,6 @@
-package com.example.demo.OnlineExam.service;
+﻿package com.example.demo.onlineexam.service;
 
-import com.example.demo.OnlineExam.DTO.CreateOptionRequest;
+import com.example.demo.onlineexam.dto.CreateOptionRequest;
 
 public interface OptionService {
 

@@ -1,8 +1,8 @@
-package com.example.demo.Timetable.Model;
+﻿package com.example.demo.timetable.model;
 
-import com.example.demo.SchoolStructure.Model.SchoolClass;
-import com.example.demo.SchoolStructure.Model.Subject;
-import com.example.demo.SchoolStructure.Model.Teacher;
+import com.example.demo.schoolstructure.model.SchoolClass;
+import com.example.demo.schoolstructure.model.Subject;
+import com.example.demo.schoolstructure.model.Teacher;
 import jakarta.persistence.*;
 import lombok.*;
 

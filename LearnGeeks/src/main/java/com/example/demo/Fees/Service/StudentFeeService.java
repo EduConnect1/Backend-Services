@@ -1,7 +1,7 @@
-package com.example.demo.Fees.Service;
+﻿package com.example.demo.fees.service;
 
-import com.example.demo.Fees.DTO.StudentFeeRequest;
-import com.example.demo.Fees.DTO.StudentFeeResponse;
+import com.example.demo.fees.dto.StudentFeeRequest;
+import com.example.demo.fees.dto.StudentFeeResponse;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package com.example.demo.Timetable.Controller;
+﻿package com.example.demo.timetable.controller;
 
-import com.example.demo.Timetable.DTO.TimetableSessionRequest;
-import com.example.demo.Timetable.DTO.TimetableSessionResponse;
-import com.example.demo.Timetable.Service.TimetableService;
+import com.example.demo.timetable.dto.TimetableSessionRequest;
+import com.example.demo.timetable.dto.TimetableSessionResponse;
+import com.example.demo.timetable.service.TimetableService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

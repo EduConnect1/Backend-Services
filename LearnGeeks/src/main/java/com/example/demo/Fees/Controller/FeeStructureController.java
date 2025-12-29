@@ -1,8 +1,8 @@
-package com.example.demo.Fees.Controller;
+﻿package com.example.demo.fees.controller;
 
-import com.example.demo.Fees.DTO.FeeStructureRequest;
-import com.example.demo.Fees.DTO.FeeStructureResponse;
-import com.example.demo.Fees.Service.FeeStructureService;
+import com.example.demo.fees.dto.FeeStructureRequest;
+import com.example.demo.fees.dto.FeeStructureResponse;
+import com.example.demo.fees.service.FeeStructureService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

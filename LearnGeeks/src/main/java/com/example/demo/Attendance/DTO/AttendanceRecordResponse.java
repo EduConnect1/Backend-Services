@@ -1,6 +1,6 @@
-package com.example.demo.Attendance.DTO;
+﻿package com.example.demo.attendance.dto;
 
-import com.example.demo.Attendance.model.AttendanceStatus;
+import com.example.demo.attendance.model.AttendanceStatus;
 
 public record AttendanceRecordResponse(
     Long studentId,

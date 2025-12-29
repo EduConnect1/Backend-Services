@@ -1,6 +1,7 @@
-package com.example.demo.Communication.Service;
+﻿package com.example.demo.communication.service;
 
-import com.example.demo.Communication.Model.Announcement;
+import com.example.demo.communication.model.Announcement;
+
 import java.util.List;
 
 public interface AnnouncementService {

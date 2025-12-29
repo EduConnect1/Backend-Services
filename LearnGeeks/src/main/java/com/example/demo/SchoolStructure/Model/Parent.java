@@ -1,6 +1,6 @@
-package com.example.demo.SchoolStructure.Model;
+﻿package com.example.demo.schoolstructure.model;
 
-import com.example.demo.User.Model.User;
+import com.example.demo.auth.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
 

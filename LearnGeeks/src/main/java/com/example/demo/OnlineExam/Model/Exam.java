@@ -1,8 +1,8 @@
-package com.example.demo.OnlineExam.Model;
+package com.example.demo.onlineexam.model;
 
 
 
-import com.example.demo.LearningManagementSystem.Model.Course;
+import com.example.demo.lms.model.Course;
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,7 +1,7 @@
-package com.example.demo.Attendance.model;
-import com.example.demo.SchoolStructure.Model.SchoolClass;
-import com.example.demo.SchoolStructure.Model.Subject;
-import com.example.demo.SchoolStructure.Model.Teacher;
+﻿package com.example.demo.attendance.model;
+import com.example.demo.schoolstructure.model.SchoolClass;
+import com.example.demo.schoolstructure.model.Subject;
+import com.example.demo.schoolstructure.model.Teacher;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Builder;

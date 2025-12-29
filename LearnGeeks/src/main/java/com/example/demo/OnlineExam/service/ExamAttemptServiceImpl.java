@@ -1,12 +1,12 @@
-package com.example.demo.OnlineExam.service;
+﻿package com.example.demo.onlineexam.service;
 
-import com.example.demo.OnlineExam.DTO.ExamResultResponse;
-import com.example.demo.OnlineExam.DTO.StartExamRequest;
-import com.example.demo.OnlineExam.DTO.SubmitAnswerRequest;
+import com.example.demo.onlineexam.dto.ExamResultResponse;
+import com.example.demo.onlineexam.dto.StartExamRequest;
+import com.example.demo.onlineexam.dto.SubmitAnswerRequest;
 
-import com.example.demo.OnlineExam.Model.*;
-import com.example.demo.OnlineExam.repository.*;
-import com.example.demo.SchoolStructure.repository.StudentRepository;
+import com.example.demo.onlineexam.model.*;
+import com.example.demo.onlineexam.repository.*;
+import com.example.demo.schoolstructure.repository.StudentRepository;
 
 
 import jakarta.transaction.Transactional;

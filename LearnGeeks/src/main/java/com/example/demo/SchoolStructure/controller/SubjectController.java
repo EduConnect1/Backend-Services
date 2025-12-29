@@ -1,9 +1,9 @@
-package com.example.demo.SchoolStructure.controller;
+﻿package com.example.demo.schoolstructure.controller;
 
-import com.example.demo.SchoolStructure.DTO.SubjectDTO.CreateSubjectRequest;
-import com.example.demo.SchoolStructure.DTO.SubjectDTO.SubjectResponse;
-import com.example.demo.SchoolStructure.Model.Subject;
-import com.example.demo.SchoolStructure.service.SubjectService;
+import com.example.demo.schoolstructure.dto.subjectdto.CreateSubjectRequest;
+import com.example.demo.schoolstructure.dto.subjectdto.SubjectResponse;
+import com.example.demo.schoolstructure.model.Subject;
+import com.example.demo.schoolstructure.service.SubjectService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

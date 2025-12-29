@@ -1,4 +1,4 @@
-package com.example.demo.Fees.DTO;
+﻿package com.example.demo.fees.dto;
 
 public record StudentFeeRequest(
         Long studentId,

@@ -1,27 +1,27 @@
-package com.example.demo.Assignment.service;
+﻿package com.example.demo.assignment.service;
 
-import com.example.demo.Assignment.DTO.AssignmentResponse;
-import com.example.demo.Assignment.DTO.AssignmentSubmissionResponse;
-import com.example.demo.Assignment.DTO.CreateAssignmentRequest;
-import com.example.demo.Assignment.DTO.GradeAssignmentRequest;
-import com.example.demo.Assignment.DTO.StudentAssignmentSummaryResponse;
-import com.example.demo.Assignment.DTO.SubmitAssignmentRequest;
+import com.example.demo.assignment.dto.AssignmentResponse;
+import com.example.demo.assignment.dto.AssignmentSubmissionResponse;
+import com.example.demo.assignment.dto.CreateAssignmentRequest;
+import com.example.demo.assignment.dto.GradeAssignmentRequest;
+import com.example.demo.assignment.dto.StudentAssignmentSummaryResponse;
+import com.example.demo.assignment.dto.SubmitAssignmentRequest;
 
-import com.example.demo.Assignment.Model.Assignment;
-import com.example.demo.Assignment.Model.AssignmentSubmission;
-import com.example.demo.Assignment.Model.AssignmentStatus;
+import com.example.demo.assignment.model.Assignment;
+import com.example.demo.assignment.model.AssignmentSubmission;
+import com.example.demo.assignment.model.AssignmentStatus;
 
-import com.example.demo.Assignment.repository.AssignmentRepository;
-import com.example.demo.Assignment.repository.AssignmentSubmissionRepository;
+import com.example.demo.assignment.repository.AssignmentRepository;
+import com.example.demo.assignment.repository.AssignmentSubmissionRepository;
 
-import com.example.demo.SchoolStructure.Model.Subject;
-import com.example.demo.SchoolStructure.repository.SubjectRepository;
+import com.example.demo.schoolstructure.model.Subject;
+import com.example.demo.schoolstructure.repository.SubjectRepository;
 
-import com.example.demo.SchoolStructure.Model.Teacher;
-import com.example.demo.SchoolStructure.repository.TeacherRepository;
+import com.example.demo.schoolstructure.model.Teacher;
+import com.example.demo.schoolstructure.repository.TeacherRepository;
 
-import com.example.demo.SchoolStructure.Model.Student;
-import com.example.demo.SchoolStructure.repository.StudentRepository;
+import com.example.demo.schoolstructure.model.Student;
+import com.example.demo.schoolstructure.repository.StudentRepository;
 
 import jakarta.persistence.EntityNotFoundException;
 

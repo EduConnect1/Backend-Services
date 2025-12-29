@@ -1,7 +1,7 @@
-package com.example.demo.OnlineExam.Controller;
+﻿package com.example.demo.onlineexam.controller;
 
-import com.example.demo.OnlineExam.DTO.*;
-import com.example.demo.OnlineExam.service.*;
+import com.example.demo.onlineexam.dto.*;
+import com.example.demo.onlineexam.service.*;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

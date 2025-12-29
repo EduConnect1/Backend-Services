@@ -1,6 +1,6 @@
-package com.example.demo.OnlineExam.Model;
+﻿package com.example.demo.onlineexam.model;
 
-import com.example.demo.SchoolStructure.Model.Student;
+import com.example.demo.schoolstructure.model.Student;
 import jakarta.persistence.*;
 import lombok.*;
 

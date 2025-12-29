@@ -1,16 +1,16 @@
-package com.example.demo.Timetable.Service;
+﻿package com.example.demo.timetable.service;
 
-import com.example.demo.Timetable.DTO.TimetableSessionRequest;
-import com.example.demo.Timetable.DTO.TimetableSessionResponse;
-import com.example.demo.Timetable.Model.TimetableSession;
-import com.example.demo.Timetable.Repository.TimetableSessionRepository;
+import com.example.demo.timetable.dto.TimetableSessionRequest;
+import com.example.demo.timetable.dto.TimetableSessionResponse;
+import com.example.demo.timetable.model.TimetableSession;
+import com.example.demo.timetable.repository.TimetableSessionRepository;
 
-import com.example.demo.SchoolStructure.Model.SchoolClass;
-import com.example.demo.SchoolStructure.Model.Teacher;
-import com.example.demo.SchoolStructure.Model.Subject;
-import com.example.demo.SchoolStructure.repository.SchoolClassRepository;
-import com.example.demo.SchoolStructure.repository.TeacherRepository;
-import com.example.demo.SchoolStructure.repository.SubjectRepository;
+import com.example.demo.schoolstructure.model.SchoolClass;
+import com.example.demo.schoolstructure.model.Teacher;
+import com.example.demo.schoolstructure.model.Subject;
+import com.example.demo.schoolstructure.repository.SchoolClassRepository;
+import com.example.demo.schoolstructure.repository.TeacherRepository;
+import com.example.demo.schoolstructure.repository.SubjectRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

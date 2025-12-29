@@ -1,7 +1,7 @@
-package com.example.demo.Fees.Repository;
+﻿package com.example.demo.fees.repository;
 
-import com.example.demo.Fees.Model.StudentFee;
-import com.example.demo.SchoolStructure.Model.Student;
+import com.example.demo.fees.model.StudentFee;
+import com.example.demo.schoolstructure.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

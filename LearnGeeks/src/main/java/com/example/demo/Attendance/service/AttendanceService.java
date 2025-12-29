@@ -1,6 +1,6 @@
-package com.example.demo.Attendance.service;
+﻿package com.example.demo.attendance.service;
 
-import com.example.demo.Attendance.DTO.*;
+import com.example.demo.attendance.dto.*;
 import java.time.LocalDate;
 import java.util.List;
 public interface AttendanceService {

@@ -1,6 +1,6 @@
-package com.example.demo.OnlineExam.repository;
+﻿package com.example.demo.onlineexam.repository;
 
-import com.example.demo.OnlineExam.Model.StudentExamAttempt;
+import com.example.demo.onlineexam.model.StudentExamAttempt;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

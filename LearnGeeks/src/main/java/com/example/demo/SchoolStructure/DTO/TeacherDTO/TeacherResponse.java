@@ -1,4 +1,4 @@
-package com.example.demo.SchoolStructure.DTO.TeacherDTO;
+﻿package com.example.demo.schoolstructure.dto.teacherdto;
 
 import java.util.Set;
 

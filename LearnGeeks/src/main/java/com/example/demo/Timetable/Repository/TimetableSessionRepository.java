@@ -1,8 +1,8 @@
-package com.example.demo.Timetable.Repository;
+﻿package com.example.demo.timetable.repository;
 
-import com.example.demo.Timetable.Model.TimetableSession;
-import com.example.demo.SchoolStructure.Model.SchoolClass;
-import com.example.demo.SchoolStructure.Model.Teacher;
+import com.example.demo.timetable.model.TimetableSession;
+import com.example.demo.schoolstructure.model.SchoolClass;
+import com.example.demo.schoolstructure.model.Teacher;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.DayOfWeek;

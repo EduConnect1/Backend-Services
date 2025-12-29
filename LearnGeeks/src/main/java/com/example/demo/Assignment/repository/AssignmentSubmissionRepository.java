@@ -1,6 +1,6 @@
-package com.example.demo.Assignment.repository;
-import com.example.demo.Assignment.Model.AssignmentSubmission;
-import com.example.demo.Assignment.Model.AssignmentStatus;
+﻿package com.example.demo.assignment.repository;
+import com.example.demo.assignment.model.AssignmentSubmission;
+import com.example.demo.assignment.model.AssignmentStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

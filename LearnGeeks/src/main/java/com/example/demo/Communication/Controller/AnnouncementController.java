@@ -1,7 +1,7 @@
-package com.example.demo.Communication.Controller;
+﻿package com.example.demo.communication.controller;
 
-import com.example.demo.Communication.Model.Announcement;
-import com.example.demo.Communication.Service.AnnouncementService;
+import com.example.demo.communication.model.Announcement;
+import com.example.demo.communication.service.AnnouncementService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
-package com.example.demo.Attendance.Controller;
-import com.example.demo.Attendance.DTO.*;
-import com.example.demo.Attendance.service.AttendanceService;
+﻿package com.example.demo.attendance.controller;
+import com.example.demo.attendance.dto.*;
+import com.example.demo.attendance.service.AttendanceService;
 
 
 import jakarta.validation.Valid;

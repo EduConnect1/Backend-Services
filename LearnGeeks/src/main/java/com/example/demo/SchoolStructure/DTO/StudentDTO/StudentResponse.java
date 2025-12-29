@@ -1,4 +1,4 @@
-package com.example.demo.SchoolStructure.DTO.StudentDTO;
+﻿package com.example.demo.schoolstructure.dto.studentdto;
 
 public record StudentResponse(
     Long id,

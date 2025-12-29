@@ -1,6 +1,6 @@
-package com.example.demo.Communication.Service;
+﻿package com.example.demo.communication.service;
 
-import com.example.demo.Communication.Model.Conversation;
+import com.example.demo.communication.model.Conversation;
 
 public interface ConversationService {
 

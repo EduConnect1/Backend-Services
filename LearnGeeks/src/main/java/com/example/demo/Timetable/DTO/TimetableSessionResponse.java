@@ -1,4 +1,4 @@
-package com.example.demo.Timetable.DTO;
+﻿package com.example.demo.timetable.dto;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;

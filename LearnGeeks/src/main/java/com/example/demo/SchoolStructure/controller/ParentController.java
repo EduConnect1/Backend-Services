@@ -1,11 +1,11 @@
-package com.example.demo.SchoolStructure.controller;
+﻿package com.example.demo.schoolstructure.controller;
 
-import com.example.demo.SchoolStructure.DTO.ParentDTO.CreateParentRequest;
-import com.example.demo.SchoolStructure.DTO.ParentDTO.ParentResponse;
-import com.example.demo.SchoolStructure.Model.Parent;
-import com.example.demo.SchoolStructure.service.ParentService;
-import com.example.demo.User.Model.User;
-import com.example.demo.User.Repository.UserRepository;
+import com.example.demo.schoolstructure.dto.parentdto.CreateParentRequest;
+import com.example.demo.schoolstructure.dto.parentdto.ParentResponse;
+import com.example.demo.schoolstructure.model.Parent;
+import com.example.demo.schoolstructure.service.ParentService;
+import com.example.demo.auth.entity.User;
+import com.example.demo.auth.repository.UserRepository;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

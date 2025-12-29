@@ -1,7 +1,7 @@
-package com.example.demo.Fees.Controller;
-import com.example.demo.Fees.DTO.PaymentRequest;
-import com.example.demo.Fees.DTO.PaymentResponse;
-import com.example.demo.Fees.Service.PaymentService;
+﻿package com.example.demo.fees.controller;
+import com.example.demo.fees.dto.PaymentRequest;
+import com.example.demo.fees.dto.PaymentResponse;
+import com.example.demo.fees.service.PaymentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

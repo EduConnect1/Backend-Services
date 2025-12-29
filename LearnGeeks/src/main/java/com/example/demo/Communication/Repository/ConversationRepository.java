@@ -1,6 +1,6 @@
-package com.example.demo.Communication.Repository;
+﻿package com.example.demo.communication.repository;
 
-import com.example.demo.Communication.Model.Conversation;
+import com.example.demo.communication.model.Conversation;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

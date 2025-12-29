@@ -1,6 +1,6 @@
-package com.example.demo.Attendance.repository;
-import com.example.demo.Attendance.model.AttendanceRecord;
-import com.example.demo.Attendance.model.AttendanceStatus;
+﻿package com.example.demo.attendance.repository;
+import com.example.demo.attendance.model.AttendanceRecord;
+import com.example.demo.attendance.model.AttendanceStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
