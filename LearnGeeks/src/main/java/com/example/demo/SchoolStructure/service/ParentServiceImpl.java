@@ -32,8 +32,8 @@ public class ParentServiceImpl implements ParentService {
     }
 
     @Override
-    public List<Parent> getParentsByStudent(Long studentId) {
-        return parentRepository.findByStudentId(studentId);
+    public List<Parent> getParentsByStudent_Id(Long student_Id) {
+        return parentRepository.findByStudent_Id(student_Id);
     }
 
     @Override
