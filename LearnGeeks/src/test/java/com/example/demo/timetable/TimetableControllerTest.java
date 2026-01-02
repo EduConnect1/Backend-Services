@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(TimetableController.class)
-@AutoConfigureMockMvc(addFilters = false) // disables JWT/security filters
+@AutoConfigureMockMvc(addFilters = false) 
 class TimetableControllerTest {
 
     @Autowired
@@ -36,9 +36,7 @@ class TimetableControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // =========================
-    // POST /api/timetables
-    // =========================
+    
     @Test
     void shouldCreateTimetableSession() throws Exception {
 
@@ -56,9 +54,7 @@ class TimetableControllerTest {
                 .andExpect(jsonPath("$.id").value(10));
     }
 
-    // =========================
-    // PUT /api/timetables/{sessionId}
-    // =========================
+    
     @Test
     void shouldUpdateTimetableSession() throws Exception {
 
@@ -76,9 +72,7 @@ class TimetableControllerTest {
                 .andExpect(jsonPath("$.id").value(1));
     }
 
-    // =========================
-    // DELETE /api/timetables/{sessionId}
-    // =========================
+    
     @Test
     void shouldDeleteTimetableSession() throws Exception {
 
@@ -88,9 +82,7 @@ class TimetableControllerTest {
                 .andExpect(status().isOk());
     }
 
-    // =========================
-    // GET /api/timetables/teacher/{teacherId}
-    // =========================
+    
     @Test
     void shouldGetTimetableByTeacher() throws Exception {
 
@@ -105,9 +97,7 @@ class TimetableControllerTest {
                 .andExpect(jsonPath("$.size()").value(2));
     }
 
-    // =========================
-    // GET /api/timetables/class/{classId}
-    // =========================
+    
     @Test
     void shouldGetTimetableByClass() throws Exception {
 
