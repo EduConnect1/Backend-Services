@@ -35,7 +35,7 @@ class StudentFeeControllerTest {
 
     @Test
     void shouldGetStudentFees() throws Exception {
-        // id, studentId, feeStructureId, amountDue, amountPaid, fullyPaid
+        
         StudentFeeResponse response = new StudentFeeResponse(10L, 1L, 1L, 1000.0, 0.0, false);
 
         when(studentFeeService.getStudentFees(1L))

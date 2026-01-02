@@ -36,7 +36,7 @@ class PaymentControllerTest {
 
     @Test
     void shouldCreatePayment() throws Exception {
-        // studentId, amount, paymentDate, method
+        
         PaymentRequest request = new PaymentRequest(1L, 1200.0, LocalDateTime.now(), "Credit Card");
 
         doNothing().when(paymentService).recordPayment(any(PaymentRequest.class));
@@ -49,7 +49,7 @@ class PaymentControllerTest {
 
     @Test
     void shouldGetPaymentsByStudent() throws Exception {
-        // id, studentId, amount, paymentDate, method
+        
         PaymentResponse response = new PaymentResponse(1L, 1L, 1200.0, LocalDateTime.now(), "Credit Card");
 
         when(paymentService.getPaymentsForStudent(1L))
