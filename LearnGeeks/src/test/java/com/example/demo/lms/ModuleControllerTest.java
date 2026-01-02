@@ -36,9 +36,7 @@ class ModuleControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // =========================
-    // POST /api/lms/modules
-    // =========================
+    
     @Test
     void shouldCreateModule() throws Exception {
 
@@ -60,9 +58,7 @@ class ModuleControllerTest {
                 .andExpect(jsonPath("$.title").value("Algebra"));
     }
 
-    // =========================
-    // GET /api/lms/modules/course/{courseId}
-    // =========================
+    
     @Test
     void shouldGetModulesByCourse() throws Exception {
 
