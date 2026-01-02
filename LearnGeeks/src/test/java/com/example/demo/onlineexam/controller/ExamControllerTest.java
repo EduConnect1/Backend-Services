@@ -42,10 +42,9 @@ class ExamControllerTest {
 
     @Test
     void shouldCreateExam() throws Exception {
-        // title, courseId, duration, marks, start, end
         CreateExamRequest request = new CreateExamRequest("Midterm", 1L, 60, 100, LocalDateTime.now().plusDays(1), LocalDateTime.now().plusDays(1).plusHours(1));
         
-        // id, title, courseId, duration, marks, start, end, published
+        
         ExamResponse response = new ExamResponse(10L, "Midterm", 1L, 60, 100, LocalDateTime.now(), LocalDateTime.now(), true);
 
         when(examService.createExam(any(CreateExamRequest.class))).thenReturn(response);
@@ -85,7 +84,7 @@ class ExamControllerTest {
 
     @Test
     void shouldSubmitAnswer() throws Exception {
-        // attemptId, questionId, answer(String)
+        
         SubmitAnswerRequest request = new SubmitAnswerRequest(100L, 1L, "Option A");
 
         doNothing().when(examAttemptService).submitAnswer(any(SubmitAnswerRequest.class));
@@ -98,7 +97,7 @@ class ExamControllerTest {
 
     @Test
     void shouldSubmitExam() throws Exception {
-        // studentId, examId, score, passed
+        
         ExamResultResponse response = new ExamResultResponse(1L, 2L, 85, true);
 
         when(examAttemptService.submitExam(100L)).thenReturn(response);
@@ -110,7 +109,7 @@ class ExamControllerTest {
 
     @Test
     void shouldGetExam() throws Exception {
-        // id, title, courseId, duration, marks, start, end, published
+        
         ExamResponse response = new ExamResponse(1L, "Final", 1L, 60, 100, LocalDateTime.now(), LocalDateTime.now(), true);
 
         when(examService.getExamById(1L)).thenReturn(response);
