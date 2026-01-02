@@ -38,10 +38,9 @@ class AttendanceControllerTest {
 
     @Test
     void shouldCreateSession() throws Exception {
-        // schoolClassId, subjectId, teacherId, attendanceDate
+        
         CreateAttendanceSessionRequest request = new CreateAttendanceSessionRequest(1L, 1L, 1L, LocalDate.now());
         
-        // id, schoolClassId, className, subjectId, subjectName, teacherId, teacherName, attendanceDate
         AttendanceSessionResponse response = new AttendanceSessionResponse(10L, 1L, "Class A", 1L, "Math", 1L, "Teacher", LocalDate.now());
 
         when(attendanceService.createAttendanceSession(any(CreateAttendanceSessionRequest.class))).thenReturn(response);
@@ -55,7 +54,6 @@ class AttendanceControllerTest {
 
     @Test
     void shouldMarkAttendance() throws Exception {
-        // studentId, status, remarks
         MarkAttendanceRequest request = new MarkAttendanceRequest(1L, AttendanceStatus.PRESENT, "Remark");
         List<MarkAttendanceRequest> requests = List.of(request);
 
@@ -69,7 +67,6 @@ class AttendanceControllerTest {
 
     @Test
     void shouldGetAttendanceBySession() throws Exception {
-        // studentId, studentName, status, remarks
         AttendanceRecordResponse record = new AttendanceRecordResponse(1L, "Student A", AttendanceStatus.PRESENT, "Remark");
 
         when(attendanceService.getAttendanceBySession(1L)).thenReturn(List.of(record));
@@ -82,7 +79,6 @@ class AttendanceControllerTest {
 
     @Test
     void shouldGetStudentSummary() throws Exception {
-        // studentId, studentName, presentCount, absentCount, lateCount, attendancePercentage
         StudentAttendanceSummaryResponse response = new StudentAttendanceSummaryResponse(1L, "Student A", 10, 0, 0, 100.0);
 
         when(attendanceService.getStudentAttendanceSummary(eq(1L), any(), any())).thenReturn(response);
@@ -94,7 +90,6 @@ class AttendanceControllerTest {
 
     @Test
     void shouldGetClassSummary() throws Exception {
-        // classId, className, totalStudents, averageAttendancePercentage
         ClassAttendanceSummaryResponse response = new ClassAttendanceSummaryResponse(1L, "Class A", 20, 95.0);
 
         when(attendanceService.getClassAttendanceSummary(1L)).thenReturn(response);
