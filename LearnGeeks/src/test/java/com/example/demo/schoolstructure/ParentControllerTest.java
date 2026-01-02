@@ -40,24 +40,21 @@ class ParentControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // ============================
-    // POST /api/parents
-    // ============================
+    
     @Test
     void shouldCreateParent() throws Exception {
 
-        // ✅ record → constructor
+        
         CreateParentRequest request =
                 new CreateParentRequest(
-                        1L, // userId
-                        2L  // studentId
+                        1L, 
+                        2L  
                 );
 
-        // Mock the Parent entity returned by the service
-        User user = new User(); // fill necessary fields if required
+        User user = new User(); 
         user.setId(1L);
 
-        Student student = new Student(); // fill necessary fields if required
+        Student student = new Student(); 
         student.setId(2L);
 
         Parent parent = new Parent();
@@ -65,7 +62,7 @@ class ParentControllerTest {
         parent.setUser(user);
         parent.setStudent(student);
 
-        // ✅ FIX: match service method signature (Long studentId, Parent parent)
+        
         when(parentService.createParent(eq(2L), any(Parent.class)))
                 .thenReturn(parent);
 
@@ -78,9 +75,7 @@ class ParentControllerTest {
                 .andExpect(jsonPath("$.studentId").value(2));
     }
 
-    // ============================
-    // GET /api/parents/student/{studentId}
-    // ============================
+   
     @Test
     void shouldGetParentByStudent() throws Exception {
 
@@ -95,7 +90,7 @@ class ParentControllerTest {
         parent.setUser(user);
         parent.setStudent(student);
 
-        // ✅ service returns entities
+        
         when(parentService.getParentsByStudent(2L))
                 .thenReturn(List.of(parent));
 
