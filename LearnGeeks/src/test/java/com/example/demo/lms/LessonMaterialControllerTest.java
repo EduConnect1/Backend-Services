@@ -35,9 +35,8 @@ class LessonMaterialControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // =========================
-    // POST /api/lms/materials
-    // =========================
+    
+    
     @Test
     void shouldCreateLessonMaterial() throws Exception {
 
@@ -59,9 +58,7 @@ class LessonMaterialControllerTest {
                 .andExpect(jsonPath("$.title").value("Lecture 1"));
     }
 
-    // =========================
-    // GET /api/lms/materials/module/{moduleId}
-    // =========================
+    
     @Test
     void shouldGetMaterialsByModule() throws Exception {
 
