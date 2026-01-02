@@ -32,9 +32,6 @@ class MessageControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // =========================
-    // POST /api/messages/send
-    // =========================
     @Test
     void shouldSendMessage() throws Exception {
 
@@ -60,9 +57,6 @@ class MessageControllerTest {
                 .andExpect(jsonPath("$.read").value(false));
     }
 
-    // =========================
-    // PUT /api/messages/{messageId}/read
-    // =========================
     @Test
     void shouldMarkMessageAsRead() throws Exception {
 
@@ -72,9 +66,6 @@ class MessageControllerTest {
                 .andExpect(status().isOk());
     }
 
-    // =========================
-    // GET /api/messages/{conversationId}
-    // =========================
     @Test
     void shouldGetMessagesByConversation() throws Exception {
 
