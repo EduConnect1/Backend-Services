@@ -8,8 +8,8 @@ public record UpdateProgressRequest(
         @NotNull(message = "Student ID is required")
         Long studentId,
 
-        @NotNull(message = "Module ID is required")
-        Long moduleId,
+        @NotNull(message = "Lesson Material ID is required")
+        Long lessonMaterialId,
 
         @Min(0) @Max(100)
         double progress

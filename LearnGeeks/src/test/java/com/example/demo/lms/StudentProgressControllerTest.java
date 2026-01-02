@@ -13,7 +13,8 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -41,18 +42,12 @@ class StudentProgressControllerTest {
 
         UpdateProgressRequest request = new UpdateProgressRequest(1L, 2L, 50.0);
 
-        StudentCourseProgressResponse response = new StudentCourseProgressResponse(
-                1L, "Student Name", 1L, "Course Title", 50.0
-        );
-
-        when(studentProgressService.updateProgress(any(UpdateProgressRequest.class)))
-                .thenReturn(response);
+        doNothing().when(studentProgressService).updateProgress(anyLong(), anyLong());
 
         mockMvc.perform(post("/api/lms/progress/update")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(request)))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.completionPercentage").value(50.0));
+                .andExpect(status().isOk());
     }
 
     // =========================
@@ -65,7 +60,7 @@ class StudentProgressControllerTest {
                 1L, "Student Name", 1L, "Course Title", 75.0
         );
 
-        when(studentProgressService.getProgress(1L, 1L))
+        when(studentProgressService.getStudentProgress(1L, 1L))
                 .thenReturn(response);
 
         mockMvc.perform(get("/api/lms/progress/student/1/course/1"))

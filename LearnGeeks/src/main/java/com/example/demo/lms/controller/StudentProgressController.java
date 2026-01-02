@@ -1,6 +1,7 @@
 package com.example.demo.lms.controller;
 
 import com.example.demo.lms.dto.StudentCourseProgressResponse;
+import com.example.demo.lms.dto.UpdateProgressRequest;
 import com.example.demo.lms.service.StudentProgressService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -21,11 +22,7 @@ public class StudentProgressController {
     }
 
     @PostMapping("/update")
-    public void updateProgress(
-            @RequestParam Long studentId,
-            @RequestParam Long lessonMaterialId
-    ) {
-        studentProgressService.updateProgress(studentId, lessonMaterialId);
+    public void updateProgress(@RequestBody UpdateProgressRequest request) {
+        studentProgressService.updateProgress(request.studentId(), request.lessonMaterialId());
     }
 }
-
