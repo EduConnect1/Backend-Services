@@ -36,9 +36,7 @@ class StudentControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // ============================
-    // POST /api/students
-    // ============================
+    
     @Test
     void shouldCreateStudent() throws Exception {
 
@@ -65,9 +63,7 @@ class StudentControllerTest {
             .andExpect(jsonPath("$.admissionNumber").value("ADM001"));
 }
 
-    // ============================
-    // GET /api/students/class/{classId}
-    // ============================
+    
     @Test
     void shouldGetStudentsByClass() throws Exception {
 
