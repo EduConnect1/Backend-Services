@@ -49,7 +49,7 @@ class StudentFeeControllerTest {
 
     @Test
     void shouldAssignFeeToStudent() throws Exception {
-        // studentId, feeStructureId
+        
         StudentFeeRequest request = new StudentFeeRequest(1L, 1L);
 
         doNothing().when(studentFeeService).assignFeeToStudent(any(StudentFeeRequest.class));
