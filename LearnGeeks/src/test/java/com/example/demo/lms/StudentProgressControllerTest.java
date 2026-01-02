@@ -34,9 +34,7 @@ class StudentProgressControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // =========================
-    // POST /api/lms/progress/update
-    // =========================
+    
     @Test
     void shouldUpdateProgress() throws Exception {
 
@@ -50,9 +48,6 @@ class StudentProgressControllerTest {
                 .andExpect(status().isOk());
     }
 
-    // =========================
-    // GET /api/lms/progress/student/{studentId}/course/{courseId}
-    // =========================
     @Test
     void shouldGetStudentProgress() throws Exception {
 
