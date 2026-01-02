@@ -35,9 +35,7 @@ class AssignmentControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // =========================
-    // POST /api/assignments
-    // =========================
+    
     @Test
     void shouldCreateAssignment() throws Exception {
 
@@ -60,15 +58,13 @@ class AssignmentControllerTest {
                 .andExpect(jsonPath("$.title").value("Math Homework"));
     }
 
-    // =========================
-    // POST /api/assignments/submit/{studentId}
-    // =========================
+    
     @Test
     void shouldSubmitAssignment() throws Exception {
 
         SubmitAssignmentRequest request = new SubmitAssignmentRequest(5L, "http://file.url");
 
-        // Controller returns void, assumes service returns void
+        
         doNothing().when(assignmentService).submitAssignment(eq(1L), any());
 
         mockMvc.perform(post("/api/assignments/submit/1")
@@ -77,9 +73,7 @@ class AssignmentControllerTest {
                 .andExpect(status().isOk());
     }
 
-    // =========================
-    // PUT /api/assignments/grade/{submissionId}
-    // =========================
+    
     @Test
     void shouldGradeAssignment() throws Exception {
 
@@ -94,9 +88,7 @@ class AssignmentControllerTest {
                 .andExpect(status().isOk());
     }
 
-    // =========================
-    // GET /api/assignments/{assignmentId}/submissions
-    // =========================
+    
     @Test
     void shouldGetSubmissionsByAssignment() throws Exception {
 
@@ -111,9 +103,7 @@ class AssignmentControllerTest {
                 .andExpect(jsonPath("$.size()").value(2));
     }
 
-    // =========================
-    // GET /api/assignments/subject/{subjectId}
-    // =========================
+    
     @Test
     void shouldGetAssignmentsBySubject() throws Exception {
 
@@ -127,9 +117,6 @@ class AssignmentControllerTest {
                 .andExpect(jsonPath("$.size()").value(1));
     }
 
-    // =========================
-    // GET /api/assignments/students/{studentId}/summary
-    // =========================
     @Test
     void shouldGetStudentAssignmentSummary() throws Exception {
 
