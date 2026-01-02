@@ -36,9 +36,7 @@ class AnalyticsControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // =========================
-    // GET /api/analytics/overview
-    // =========================
+    
     @Test
     void shouldGetAnalyticsOverview() throws Exception {
 
@@ -52,9 +50,7 @@ class AnalyticsControllerTest {
                 .andExpect(jsonPath("$.totalStudents").value(200));
     }
 
-    // =========================
-    // GET /api/analytics/course-engagement
-    // =========================
+    
     @Test
     void shouldGetCourseEngagement() throws Exception {
 
@@ -70,9 +66,7 @@ class AnalyticsControllerTest {
                 .andExpect(jsonPath("$[0].completionRate").value(75.0));
     }
 
-    // =========================
-    // GET /api/analytics/attendance/heatmap
-    // =========================
+    
     @Test
     void shouldGetAttendanceHeatmap() throws Exception {
 
@@ -89,9 +83,7 @@ class AnalyticsControllerTest {
                 .andExpect(jsonPath("$[0].attendancePercentage").value(80.0));
     }
 
-    // =========================
-    // GET /api/analytics/at-risk-students
-    // =========================
+    
     @Test
     void shouldGetAtRiskStudents() throws Exception {
 
