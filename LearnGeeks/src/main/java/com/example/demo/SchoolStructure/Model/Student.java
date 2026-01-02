@@ -32,11 +32,9 @@ public class Student {
             return "Unknown";
         }
         
-        // Get first name and last name if they exist
         String firstName = user.getFirstName() != null ? user.getFirstName() : "";
         String lastName = user.getLastName() != null ? user.getLastName() : "";
         
-        // Combine names, handling cases where one might be empty
         String fullName = (firstName + " " + lastName).trim();
         return fullName.isEmpty() ? "Unknown" : fullName;
     }
