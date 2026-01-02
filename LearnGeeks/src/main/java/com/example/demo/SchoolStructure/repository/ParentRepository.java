@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface ParentRepository extends JpaRepository<Parent, Long> {
 
-    List<Parent> findByStudent_Id(Long student_Id);
+    List<Parent> findByStudentId(Long studentId);
 }
