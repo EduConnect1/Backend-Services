@@ -37,9 +37,6 @@ class CourseControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // =========================
-    // GET /api/lms/courses
-    // =========================
     @Test
     void shouldGetAllCourses() throws Exception {
 
@@ -55,9 +52,6 @@ class CourseControllerTest {
                 .andExpect(jsonPath("$.size()").value(1));
     }
 
-    // =========================
-    // POST /api/lms/courses
-    // =========================
     @Test
     void shouldCreateCourse() throws Exception {
 
@@ -79,9 +73,6 @@ class CourseControllerTest {
                 .andExpect(jsonPath("$.title").value("Physics"));
     }
 
-    // =========================
-    // GET /api/lms/courses/{courseId}
-    // =========================
     @Test
     void shouldGetCourseById() throws Exception {
 
@@ -97,9 +88,6 @@ class CourseControllerTest {
                 .andExpect(jsonPath("$.title").value("Math"));
     }
 
-    // =========================
-    // GET /api/lms/courses/teacher/{teacherId}
-    // =========================
     @Test
     void shouldGetCoursesByTeacher() throws Exception {
 
