@@ -39,36 +39,32 @@ class TeacherControllerTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    // ============================
-    // POST /api/teachers
-    // ============================
+    
     @Test
     void shouldCreateTeacher() throws Exception {
 
-        // ✅ Request DTO
+        
         CreateTeacherRequest request = new CreateTeacherRequest(
-                1L,            // userId
-                "EMP001"       // employeeNumber
+                1L,            
+                "EMP001"       
         );
 
-        // ✅ Mock User
+        
         User user = new User();
         user.setId(1L);
         user.setFirstName("John");
         user.setLastName("Doe");
 
-        // ✅ Mock Teacher entity using Lombok builder
         Teacher teacher = Teacher.builder()
                 .id(10L)
                 .user(user)
                 .employeeNumber("EMP001")
                 .build();
 
-        // ✅ Service mock
+        
         when(teacherService.createTeacher(any(Teacher.class)))
                 .thenReturn(teacher);
 
-        // ✅ Perform POST and assert JSON response
         mockMvc.perform(post("/api/teachers")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
@@ -78,19 +74,15 @@ class TeacherControllerTest {
                 .andExpect(jsonPath("$.employeeNumber").value("EMP001"));
     }
 
-    // ============================
-    // POST /api/teachers/{teacherId}/subjects
-    // ============================
     @Test
     void shouldAssignSubjectsToTeacher() throws Exception {
 
-        // ✅ AssignSubjectRequest DTO
         AssignSubjectRequest request = new AssignSubjectRequest(Set.of(1L, 2L));
 
-        // ✅ Service method is void
+        
         doNothing().when(teacherService).assignSubjects(eq(10L), any());
 
-        // ✅ Perform POST and assert status
+        
         mockMvc.perform(post("/api/teachers/10/subjects")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
