@@ -3,10 +3,8 @@ import com.example.demo.schoolstructure.model.SchoolClass;
 import com.example.demo.schoolstructure.model.Subject;
 import com.example.demo.schoolstructure.model.Teacher;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
+import lombok.*;
+
 import java.time.LocalDate;
 @Data
 @Entity
