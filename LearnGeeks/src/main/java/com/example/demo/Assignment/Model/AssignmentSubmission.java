@@ -19,11 +19,11 @@ import java.time.LocalDateTime;
 )
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED) // JPA requirement
+@NoArgsConstructor(access = AccessLevel.PROTECTED) 
 @AllArgsConstructor
 @Builder
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@ToString(exclude = {"assignment", "student"}) // Prevent recursion in logs
+@ToString(exclude = {"assignment", "student"}) 
 public class AssignmentSubmission {
 
     @Id
@@ -31,33 +31,27 @@ public class AssignmentSubmission {
     @EqualsAndHashCode.Include
     private Long id;
 
-    // Link to the assignment this submission belongs to
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "assignment_id", nullable = false)
     private Assignment assignment;
 
-    // The student who submitted the assignment
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "student_id", nullable = false)
     private Student student;
 
-    // URL of the submitted file
     @Column(name = "file_url", nullable = false)
     private String fileUrl;
 
-    // Status of the submission: SUBMITTED, LATE, or GRADED
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private AssignmentStatus status;
 
-    // Marks assigned to the submission
     private Double marks;
 
-    // Feedback provided by teacher
     @Column(length = 1000)
     private String feedback;
 
-    // Date and time of submission
+    
     @Column(name = "submitted_at", nullable = false)
     private LocalDateTime submittedAt;
 }

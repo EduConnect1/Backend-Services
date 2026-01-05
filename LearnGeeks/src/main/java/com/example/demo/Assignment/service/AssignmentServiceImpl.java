@@ -11,8 +11,6 @@ import com.example.demo.assignment.model.Assignment;
 import com.example.demo.assignment.model.AssignmentSubmission;
 import com.example.demo.assignment.model.AssignmentStatus;
 
-// import com.example.demo.assignment.repository.AssignmentRepository;
-
 import com.example.demo.assignment.repository.AssignmentSubmissionRepository;
 import com.example.demo.assignment.repository.AssignmentRepository;
 
@@ -100,24 +98,24 @@ public class AssignmentServiceImpl implements AssignmentService {
         @Override
         public void submitAssignment(Long studentId, SubmitAssignmentRequest request) {
 
-                // Fetch the Assignment entity
+                
                 Assignment assignment = assignmentRepository.findById(request.assignmentId())
                                 .orElseThrow(() -> new EntityNotFoundException("Assignment not found"));
 
-                // Check if this student already submitted this assignment
+                
                 submissionRepository.findByAssignmentIdAndStudentId(assignment.getId(), studentId)
                                 .ifPresent(s -> {
                                         throw new IllegalStateException("Assignment already submitted");
                                 });
 
-                // Fetch the Student entity
+                
                 Student student = studentRepository.findById(studentId)
                                 .orElseThrow(() -> new EntityNotFoundException("Student not found"));
 
-                // Determine if submission is late
+        
                 boolean isLate = LocalDateTime.now().isAfter(assignment.getDeadline());
 
-                // Create new submission
+                
                 AssignmentSubmission submission = AssignmentSubmission.builder()
                                 .assignment(assignment)
                                 .student(student)
@@ -126,7 +124,7 @@ public class AssignmentServiceImpl implements AssignmentService {
                                 .submittedAt(LocalDateTime.now())
                                 .build();
 
-                // Save submission
+                
                 submissionRepository.save(submission);
         }
 
