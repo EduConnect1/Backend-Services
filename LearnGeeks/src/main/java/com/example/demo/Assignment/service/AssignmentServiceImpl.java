@@ -137,7 +137,6 @@ public class AssignmentServiceImpl implements AssignmentService {
                 submission.setMarks(request.marks());
                 submission.setFeedback(request.feedback());
                 submission.setStatus(AssignmentStatus.GRADED);
-
                 submissionRepository.save(submission);
         }
 
