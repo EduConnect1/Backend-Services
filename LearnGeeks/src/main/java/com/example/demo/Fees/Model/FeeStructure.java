@@ -6,8 +6,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "fee_structures")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
