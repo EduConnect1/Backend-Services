@@ -6,8 +6,7 @@ import lombok.*;
 
 @Entity
 @Table(name = "student_fees")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
