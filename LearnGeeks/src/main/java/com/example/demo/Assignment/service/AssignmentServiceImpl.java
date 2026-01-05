@@ -11,7 +11,8 @@ import com.example.demo.assignment.model.Assignment;
 import com.example.demo.assignment.model.AssignmentSubmission;
 import com.example.demo.assignment.model.AssignmentStatus;
 
-import com.example.demo.assignment.repository.AssignmentRepository;
+// import com.example.demo.assignment.repository.AssignmentRepository;
+
 import com.example.demo.assignment.repository.AssignmentSubmissionRepository;
 
 import com.example.demo.schoolstructure.model.Subject;
@@ -38,7 +39,7 @@ import java.util.List;
 @Transactional
 public class AssignmentServiceImpl implements AssignmentService {
 
-    private final AssignmentRepository assignmentRepository;
+    private final AssignmentSubmissionRepository assignmentRepository;
     private final AssignmentSubmissionRepository submissionRepository;
 
     private final SubjectRepository subjectRepository;
@@ -83,15 +84,15 @@ public class AssignmentServiceImpl implements AssignmentService {
         return assignmentRepository.findBySubjectId(subjectId)
                 .stream()
                 .map(a -> new AssignmentResponse(
-                        a.getId(),
-                        a.getTitle(),
-                        a.getDescription(),
-                        a.getSubject().getId(),
-                        a.getSubject().getName(),
-                        a.getTeacher().getId(),
-                        a.getTeacher().getFullName(),
-                        a.getDeadline(),
-                        a.getCreatedAt()
+                        a.getAssignment().getId(),
+                        a.getAssignment().getTitle(),
+                        a.getAssignment().getDescription(),
+                        a.getAssignment().getSubject().getId(),
+                        a.getAssignment().getSubject().getName(),
+                        a.getAssignment().getTeacher().getId(),
+                        a.getAssignment().getTeacher().getFullName(),
+                        a.getAssignment().getDeadline(),
+                        a.getAssignment().getCreatedAt()
                 ))
                 .toList();
     }
