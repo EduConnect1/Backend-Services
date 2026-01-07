@@ -1,4 +1,4 @@
-﻿package com.example.demo.attendance.dto;
+package com.example.demo.attendance.dto;
 
 public record ClassAttendanceSummaryResponse(
     Long classId,

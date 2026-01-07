@@ -1,4 +1,4 @@
-﻿package com.example.demo.assignment.repository;
+package com.example.demo.assignment.repository;
 import com.example.demo.assignment.model.AssignmentSubmission;
 import com.example.demo.assignment.model.AssignmentStatus;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,4 @@
-﻿package com.example.demo.schoolstructure.repository;
+package com.example.demo.schoolstructure.repository;
 
 import com.example.demo.schoolstructure.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;

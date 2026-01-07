@@ -1,4 +1,4 @@
-﻿package com.example.demo.schoolstructure.model;
+package com.example.demo.schoolstructure.model;
 
 import com.example.demo.auth.entity.User;
 import jakarta.persistence.*;

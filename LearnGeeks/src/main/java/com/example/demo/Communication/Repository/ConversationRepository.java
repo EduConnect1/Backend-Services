@@ -1,4 +1,4 @@
-﻿package com.example.demo.communication.repository;
+package com.example.demo.communication.repository;
 
 import com.example.demo.communication.model.Conversation;
 import org.springframework.data.jpa.repository.JpaRepository;

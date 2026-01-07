@@ -1,4 +1,4 @@
-﻿package com.example.demo.onlineexam.controller;
+package com.example.demo.onlineexam.controller;
 
 import com.example.demo.onlineexam.dto.*;
 import com.example.demo.onlineexam.service.*;

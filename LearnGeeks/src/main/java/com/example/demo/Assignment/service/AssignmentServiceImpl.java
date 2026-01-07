@@ -1,4 +1,4 @@
-﻿package com.example.demo.assignment.service;
+package com.example.demo.assignment.service;
 
 import com.example.demo.assignment.dto.AssignmentResponse;
 import com.example.demo.assignment.dto.AssignmentSubmissionResponse;

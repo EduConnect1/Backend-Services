@@ -1,4 +1,4 @@
-﻿package com.example.demo.onlineexam.model;
+package com.example.demo.onlineexam.model;
 
 import jakarta.persistence.*;
 import lombok.*;

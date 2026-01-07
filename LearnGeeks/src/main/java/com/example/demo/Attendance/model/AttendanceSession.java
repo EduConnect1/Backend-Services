@@ -1,4 +1,4 @@
-﻿package com.example.demo.attendance.model;
+package com.example.demo.attendance.model;
 import com.example.demo.schoolstructure.model.SchoolClass;
 import com.example.demo.schoolstructure.model.Subject;
 import com.example.demo.schoolstructure.model.Teacher;

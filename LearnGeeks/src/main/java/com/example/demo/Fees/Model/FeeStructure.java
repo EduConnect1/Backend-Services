@@ -1,4 +1,4 @@
-﻿package com.example.demo.fees.model;
+package com.example.demo.fees.model;
 
 import com.example.demo.schoolstructure.model.SchoolClass;
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-﻿package com.example.demo.schoolstructure.dto.classdto;
+package com.example.demo.schoolstructure.dto.classdto;
 
 public record ClassResponse(
     Long id,

@@ -1,4 +1,4 @@
-﻿package com.example.demo.schoolstructure.controller;
+package com.example.demo.schoolstructure.controller;
 import com.example.demo.schoolstructure.dto.teacherdto.AssignSubjectRequest;
 import com.example.demo.schoolstructure.dto.teacherdto.CreateTeacherRequest;
 import com.example.demo.schoolstructure.dto.teacherdto.TeacherResponse;

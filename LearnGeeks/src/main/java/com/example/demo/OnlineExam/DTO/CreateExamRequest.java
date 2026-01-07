@@ -1,4 +1,4 @@
-﻿package com.example.demo.onlineexam.dto;
+package com.example.demo.onlineexam.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

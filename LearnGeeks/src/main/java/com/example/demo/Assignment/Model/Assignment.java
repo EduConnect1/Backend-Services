@@ -1,4 +1,4 @@
-﻿package com.example.demo.assignment.model;
+package com.example.demo.assignment.model;
 import com.example.demo.schoolstructure.model.Teacher;
 import com.example.demo.schoolstructure.model.Subject;
 import jakarta.persistence.*;

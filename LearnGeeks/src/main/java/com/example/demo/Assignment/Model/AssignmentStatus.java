@@ -1,4 +1,4 @@
-﻿package com.example.demo.assignment.model;
+package com.example.demo.assignment.model;
 
 public enum AssignmentStatus {
     SUBMITTED,

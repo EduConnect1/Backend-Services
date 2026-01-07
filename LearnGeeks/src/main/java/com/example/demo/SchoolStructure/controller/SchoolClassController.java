@@ -1,4 +1,4 @@
-﻿package com.example.demo.schoolstructure.controller;
+package com.example.demo.schoolstructure.controller;
 
 import com.example.demo.schoolstructure.dto.classdto.CreateClassRequest;
 import com.example.demo.schoolstructure.dto.classdto.ClassResponse;

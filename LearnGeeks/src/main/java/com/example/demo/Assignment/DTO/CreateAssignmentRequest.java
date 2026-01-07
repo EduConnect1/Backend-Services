@@ -1,4 +1,4 @@
-﻿package com.example.demo.assignment.dto;
+package com.example.demo.assignment.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

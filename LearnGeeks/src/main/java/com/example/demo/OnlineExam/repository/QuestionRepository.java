@@ -1,4 +1,4 @@
-﻿package com.example.demo.onlineexam.repository;
+package com.example.demo.onlineexam.repository;
 
 import com.example.demo.onlineexam.model.Question;
 import org.springframework.data.jpa.repository.JpaRepository;

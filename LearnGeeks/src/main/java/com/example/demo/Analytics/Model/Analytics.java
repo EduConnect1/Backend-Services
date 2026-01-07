@@ -1,4 +1,4 @@
-﻿package com.example.demo.Analytics.Model;
+package com.example.demo.Analytics.Model;
 
 import jakarta.persistence.*;
 

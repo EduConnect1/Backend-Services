@@ -1,4 +1,4 @@
-﻿package com.example.demo.onlineexam.model;
+package com.example.demo.onlineexam.model;
 
 import com.example.demo.schoolstructure.model.Student;
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-﻿package com.example.demo.timetable.service;
+package com.example.demo.timetable.service;
 
 import com.example.demo.timetable.dto.TimetableSessionRequest;
 import com.example.demo.timetable.dto.TimetableSessionResponse;

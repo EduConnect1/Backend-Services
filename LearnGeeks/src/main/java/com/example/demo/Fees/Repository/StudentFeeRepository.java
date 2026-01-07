@@ -1,4 +1,4 @@
-﻿package com.example.demo.fees.repository;
+package com.example.demo.fees.repository;
 
 import com.example.demo.fees.model.StudentFee;
 import com.example.demo.schoolstructure.model.Student;
