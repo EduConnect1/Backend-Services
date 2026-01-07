@@ -1,4 +1,4 @@
-﻿package com.example.demo.Analytics.Repository;
+package com.example.demo.Analytics.Repository;
 
 import com.example.demo.Analytics.Model.Analytics;
 import org.springframework.data.jpa.repository.JpaRepository;

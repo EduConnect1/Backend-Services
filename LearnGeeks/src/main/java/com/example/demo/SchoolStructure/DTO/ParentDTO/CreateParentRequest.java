@@ -1,4 +1,4 @@
-﻿package com.example.demo.schoolstructure.dto.parentdto;
+package com.example.demo.schoolstructure.dto.parentdto;
 
 import jakarta.validation.constraints.NotNull;
 

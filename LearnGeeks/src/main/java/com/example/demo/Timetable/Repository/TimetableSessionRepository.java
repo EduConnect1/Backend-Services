@@ -1,4 +1,4 @@
-﻿package com.example.demo.timetable.repository;
+package com.example.demo.timetable.repository;
 
 import com.example.demo.timetable.model.TimetableSession;
 import com.example.demo.schoolstructure.model.SchoolClass;

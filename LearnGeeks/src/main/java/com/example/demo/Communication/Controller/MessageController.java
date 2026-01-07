@@ -1,4 +1,4 @@
-﻿package com.example.demo.communication.controller;
+package com.example.demo.communication.controller;
 
 import com.example.demo.communication.model.Message;
 import com.example.demo.communication.service.MessageService;

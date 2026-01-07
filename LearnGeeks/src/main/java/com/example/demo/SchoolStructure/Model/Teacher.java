@@ -1,4 +1,4 @@
-﻿package com.example.demo.schoolstructure.model;
+package com.example.demo.schoolstructure.model;
 
 import com.example.demo.auth.entity.User;
 import jakarta.persistence.*;
@@ -32,20 +32,15 @@ public class Teacher {
         inverseJoinColumns = @JoinColumn(name = "subject_id")
     )
     private Set<Subject> subjects;
-    /**
-     * Gets the full name of the teacher by combining first and last name from the associated user
-     * @return Full name of the teacher or "Unknown" if user is null
-     */
+    
     public String getFullName() {
         if (user == null) {
             return "Unknown";
         }
         
-        // Get first name and last name if they exist
         String firstName = user.getFirstName() != null ? user.getFirstName() : "";
         String lastName = user.getLastName() != null ? user.getLastName() : "";
         
-        // Combine names, handling cases where one might be empty
         String fullName = (firstName + " " + lastName).trim();
         return fullName.isEmpty() ? "Unknown" : fullName;
     }

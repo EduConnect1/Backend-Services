@@ -1,4 +1,4 @@
-﻿package com.example.demo.assignment.repository;
+package com.example.demo.assignment.repository;
 import com.example.demo.assignment.model.AssignmentSubmission;
 import com.example.demo.assignment.model.AssignmentStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -18,6 +18,7 @@ public interface AssignmentSubmissionRepository extends JpaRepository<Assignment
     List<AssignmentSubmission> findByAssignmentId(Long assignmentId);
 
     List<AssignmentSubmission> findByStudentId(Long studentId);
+    List<AssignmentSubmission> findBySubjectId(Long subjectId);
 
     long countByAssignmentIdAndStatus(Long assignmentId, AssignmentStatus status);
 }

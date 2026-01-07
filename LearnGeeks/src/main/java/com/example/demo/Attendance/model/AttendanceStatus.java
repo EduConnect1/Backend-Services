@@ -1,4 +1,4 @@
-﻿package com.example.demo.attendance.model;
+package com.example.demo.attendance.model;
 public enum AttendanceStatus {
     
     PRESENT,

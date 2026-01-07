@@ -1,4 +1,4 @@
-﻿package com.example.demo.schoolstructure.service;
+package com.example.demo.schoolstructure.service;
 
 import com.example.demo.schoolstructure.model.SchoolClass;
 import java.util.List;

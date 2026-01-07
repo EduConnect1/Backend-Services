@@ -1,4 +1,4 @@
-﻿package com.example.demo.timetable.controller;
+package com.example.demo.timetable.controller;
 
 import com.example.demo.timetable.dto.TimetableSessionRequest;
 import com.example.demo.timetable.dto.TimetableSessionResponse;

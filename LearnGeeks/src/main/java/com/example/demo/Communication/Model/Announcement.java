@@ -1,4 +1,4 @@
-﻿package com.example.demo.communication.model;
+package com.example.demo.communication.model;
 
 import jakarta.persistence.*;
 import lombok.*;

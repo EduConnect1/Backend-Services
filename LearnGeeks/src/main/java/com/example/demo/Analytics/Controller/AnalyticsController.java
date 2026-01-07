@@ -1,4 +1,4 @@
-﻿package com.example.demo.Analytics.Controller;
+package com.example.demo.Analytics.Controller;
 import com.example.demo.Analytics.DTO.*;
 import com.example.demo.Analytics.Service.AnalyticsService;
 

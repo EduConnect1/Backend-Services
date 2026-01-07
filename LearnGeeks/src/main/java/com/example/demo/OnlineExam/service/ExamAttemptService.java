@@ -1,4 +1,4 @@
-﻿package com.example.demo.onlineexam.service;
+package com.example.demo.onlineexam.service;
 
 import com.example.demo.onlineexam.dto.ExamResultResponse;
 import com.example.demo.onlineexam.dto.StartExamRequest;

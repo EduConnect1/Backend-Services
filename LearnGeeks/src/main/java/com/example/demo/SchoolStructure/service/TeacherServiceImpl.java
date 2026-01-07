@@ -1,4 +1,4 @@
-﻿package com.example.demo.schoolstructure.service;
+package com.example.demo.schoolstructure.service;
 
 import com.example.demo.schoolstructure.model.Subject;
 import com.example.demo.schoolstructure.model.Teacher;

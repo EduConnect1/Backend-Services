@@ -1,12 +1,11 @@
-﻿package com.example.demo.onlineexam.model;
+package com.example.demo.onlineexam.model;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @Table(name = "questions")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

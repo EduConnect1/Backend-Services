@@ -1,4 +1,4 @@
-﻿package com.example.demo.onlineexam.model;
+package com.example.demo.onlineexam.model;
 
 import com.example.demo.schoolstructure.model.Student;
 import jakarta.persistence.*;
@@ -8,8 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "student_exam_attempts")
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder

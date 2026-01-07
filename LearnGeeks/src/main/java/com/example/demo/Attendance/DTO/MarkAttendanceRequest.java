@@ -1,4 +1,4 @@
-﻿package com.example.demo.attendance.dto;
+package com.example.demo.attendance.dto;
 
 import com.example.demo.attendance.model.AttendanceStatus;
 import jakarta.validation.constraints.NotNull;

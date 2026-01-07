@@ -1,4 +1,4 @@
-﻿package com.example.demo.Analytics.DTO;
+package com.example.demo.Analytics.DTO;
 
 import java.time.LocalDate;
 
