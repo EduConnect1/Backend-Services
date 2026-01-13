@@ -22,6 +22,9 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import com.example.demo.core.security.JwtAuthenticationFilter;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 @WebMvcTest(AssignmentController.class)
 @AutoConfigureMockMvc(addFilters = false)
 class AssignmentControllerTest {
@@ -31,6 +34,12 @@ class AssignmentControllerTest {
 
     @MockBean
     private AssignmentService assignmentService;
+
+    @MockBean
+    private UserDetailsService userDetailsService;
+
+    @MockBean
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Autowired
     private ObjectMapper objectMapper;
