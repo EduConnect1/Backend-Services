@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Logs and Temp ###
+*.log
+*_log.txt
+*.txt
+refactor.ps1
