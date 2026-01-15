@@ -1,16 +1,12 @@
-# Use Java 21
+
+FROM maven:3.9.6-eclipse-temurin-21 AS build
+WORKDIR /build
+COPY . .
+RUN mvn clean package -DskipTests
+
+
 FROM eclipse-temurin:21-jdk-alpine
-
-# Create working directory
 WORKDIR /app
-
-
-COPY target/*.jar app.jar
-
-# Expose Spring Boot port
+COPY --from=build /build/target/*.jar app.jar
 EXPOSE 8080
-
-# Run Spring Boot app
-ENTRYPOINT ["java","-jar","app.jar"]
-ENTRYPOINT ["java","-jar","app.jar","--server.port=${PORT}"]
-
+ENTRYPOINT ["java", "-jar", "app.jar"]
