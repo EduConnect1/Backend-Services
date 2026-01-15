@@ -24,5 +24,6 @@ public class FeeStructure {
 
     private Double amount;
 
+    @Column(name = "\"year\"")
     private int year;
 }
