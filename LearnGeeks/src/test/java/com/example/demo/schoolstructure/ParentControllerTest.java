@@ -18,6 +18,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
@@ -26,6 +27,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import com.example.demo.auth.repository.UserRepository;
+import com.example.demo.core.security.JwtAuthenticationFilter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 @WebMvcTest(ParentController.class)
 @AutoConfigureMockMvc(addFilters = false)
@@ -39,6 +43,15 @@ class ParentControllerTest {
 
     @Autowired
     private ObjectMapper objectMapper;
+
+    @MockBean
+    private UserDetailsService userDetailsService;
+
+    @MockBean
+    private UserRepository userRepository;
+
+    @MockBean
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     
     @Test
@@ -62,6 +75,7 @@ class ParentControllerTest {
         parent.setUser(user);
         parent.setStudent(student);
 
+        when(userRepository.findById(1L)).thenReturn(Optional.of(user));
         
         when(parentService.createParent(eq(2L), any(Parent.class)))
                 .thenReturn(parent);

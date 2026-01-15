@@ -34,6 +34,7 @@ public class TimetableSession {
     @JoinColumn(name = "subject_id")
     private Subject subject;
 
+    @Enumerated(EnumType.STRING)
     private DayOfWeek dayOfWeek;
 
     private LocalTime startTime;

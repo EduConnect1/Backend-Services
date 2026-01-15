@@ -16,6 +16,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.Optional;
 import java.util.Set;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -25,6 +26,9 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import com.example.demo.auth.repository.UserRepository;
+import com.example.demo.core.security.JwtAuthenticationFilter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 @WebMvcTest(TeacherController.class)
 @AutoConfigureMockMvc(addFilters = false)
@@ -38,6 +42,15 @@ class TeacherControllerTest {
 
     @Autowired
     private ObjectMapper objectMapper;
+
+    @MockBean
+    private UserDetailsService userDetailsService;
+
+    @MockBean
+    private UserRepository userRepository;
+
+    @MockBean
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     
     @Test
@@ -62,6 +75,8 @@ class TeacherControllerTest {
                 .build();
 
         
+        when(userRepository.findById(1L)).thenReturn(Optional.of(user));
+
         when(teacherService.createTeacher(any(Teacher.class)))
                 .thenReturn(teacher);
 
@@ -79,8 +94,16 @@ class TeacherControllerTest {
 
         AssignSubjectRequest request = new AssignSubjectRequest(Set.of(1L, 2L));
 
+        User user = new User();
+        user.setId(1L);
         
-        doNothing().when(teacherService).assignSubjects(eq(10L), any());
+        Teacher updatedTeacher = Teacher.builder()
+                .id(10L)
+                .user(user)
+                .employeeNumber("EMP001")
+                .subjects(new java.util.HashSet<>())
+                .build();
+        when(teacherService.assignSubjects(eq(10L), any())).thenReturn(updatedTeacher);
 
         
         mockMvc.perform(post("/api/teachers/10/subjects")
