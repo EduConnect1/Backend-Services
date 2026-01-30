@@ -1,6 +1,6 @@
 package com.example.demo.core.security;
 
-//import com.example.demo.dto.enums.RoleEnum;
+
 import com.example.demo.auth.entity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
@@ -28,7 +28,7 @@ public class JwtService {
                 .claim("role", role)
                 .claim("id", user.getId())
                 .issuedAt(new Date())
-                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 15)) // 15 minutes
+                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 15))
                 .signWith(Keys.hmacShaKeyFor(secret.getBytes()))
                 .compact();
     }
