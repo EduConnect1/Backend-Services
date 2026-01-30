@@ -38,8 +38,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             HttpServletResponse response,
             FilterChain filterChain
     ) throws ServletException, IOException {
-        
-        // Skip authentication for public endpoints
+
         if (isPublicEndpoint(request.getRequestURI())) {
             filterChain.doFilter(request, response);
             return;
@@ -54,7 +53,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                 if (email != null && SecurityContextHolder.getContext().getAuthentication() == null) {
                     Claims claims = jwtService.getClaims(jwt);
                     
-                    // Extract roles from token
+
                     List<SimpleGrantedAuthority> authorities = extractAuthorities(claims);
                     
                     UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
@@ -102,7 +101,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 
     private boolean isPublicEndpoint(String requestURI) {
-        // Add public endpoints that don't require authentication
+
         return requestURI.startsWith("/api/auth/register") ||
                requestURI.startsWith("/api/auth/login") ||
                requestURI.startsWith("/api/auth/verify-email") ||
