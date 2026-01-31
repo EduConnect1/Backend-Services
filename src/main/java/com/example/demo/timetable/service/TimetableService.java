@@ -17,3 +17,6 @@ public interface TimetableService {
 
     List<TimetableSessionResponse> getTeacherTimetable(Long teacherId);
 }
+
+
+
