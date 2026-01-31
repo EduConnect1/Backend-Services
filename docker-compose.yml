@@ -17,7 +17,7 @@ services:
     build: .
     container_name: learngeeks-backend
     ports:
-      - "8080:8080"
+      - "10000:10000"
     depends_on:
       - postgres
     environment:
