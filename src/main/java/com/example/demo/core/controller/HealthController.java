@@ -9,8 +9,8 @@ import java.util.Map;
 @RestController
 public class HealthController {
 
-    @GetMapping("/")
-    public String root() {
+    @GetMapping("/health")
+    public String healthCheck() {
         return "Backend Services is running!";
     }
 
