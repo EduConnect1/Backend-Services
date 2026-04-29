@@ -8,5 +8,6 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 COPY --from=build /build/target/*.jar app.jar
 ENV PORT=8080
+ENV JAVA_TOOL_OPTIONS="-Xmx256m -Xss512k -XX:MaxRAM=400m"
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
