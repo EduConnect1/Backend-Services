@@ -5,9 +5,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import com.example.demo.Analytics.DTO.*;
-import com.example.demo.Analytics.Service.AnalyticsService;
-import com.example.demo.Analytics.Controller.AnalyticsController;
+import com.example.demo.analytics.dto.*;
+import com.example.demo.analytics.service.AnalyticsService;
+import com.example.demo.analytics.controller.AnalyticsController;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 

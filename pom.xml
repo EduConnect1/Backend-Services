@@ -13,10 +13,10 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>educonnect-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>Demo project for Spring Boot</description>
+    <name>EduConnect Backend Services</name>
+    <description>Backend REST services for EduConnect School &amp; Learning Management System</description>
 
     <properties>
         <java.version>21</java.version>

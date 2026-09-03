@@ -29,8 +29,9 @@ public class Message {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
-     @Column(nullable = false)
-     private boolean read = false;
+    @Builder.Default
+    @Column(nullable = false)
+    private boolean read = false;
 
     @Column(name = "sent_at", nullable = false)
     private LocalDateTime sentAt;

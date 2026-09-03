@@ -1,4 +1,4 @@
-package com.example.demo.Analytics.DTO;
+package com.example.demo.analytics.dto;
 
 public record AnalyticsOverviewResponse(
         

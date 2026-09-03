@@ -38,6 +38,7 @@ public class User {
     @Column(nullable = true)
     private String otp;
 
+    @Builder.Default
     @Column(nullable = true)
     private Boolean otpVerified = false;
 
@@ -47,6 +48,7 @@ public class User {
     @Column(nullable = true)
     private LocalDateTime resetTokenExpiry;
 
+    @Builder.Default
     @Column(nullable = false)
     private boolean verified = false;
 
@@ -54,6 +56,7 @@ public class User {
     @Column(nullable = false)
     private UserStatus status;
 
+    @Builder.Default
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "user_roles",
