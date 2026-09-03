@@ -10,5 +10,7 @@ public enum RoleEnum {
     @JsonProperty("ROLE_STUDENT")
     ROLE_STUDENT,
     @JsonProperty("ROLE_TEACHER")
-    ROLE_TEACHER;
+    ROLE_TEACHER,
+    @JsonProperty("ROLE_PARENT")
+    ROLE_PARENT;
 }
