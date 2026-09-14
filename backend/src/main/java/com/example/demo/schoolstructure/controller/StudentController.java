@@ -45,6 +45,22 @@ public class StudentController {
                 ));
     }
 
+    @GetMapping
+    public ResponseEntity<List<StudentResponse>> getAllStudents() {
+        List<StudentResponse> response = studentService.getStudentsByClass(null)
+                .stream()
+                .map(s -> new StudentResponse(
+                        s.getId(),
+                        s.getAdmissionNumber(),
+                        s.getUser().getId(),
+                        s.getSchoolClass() != null ? s.getSchoolClass().getId() : null,
+                        s.getSchoolClass() != null ? s.getSchoolClass().getName() : "Unassigned"
+                ))
+                .toList();
+
+        return ResponseEntity.ok(response);
+    }
+
     @GetMapping("/class/{classId}")
     public ResponseEntity<List<StudentResponse>> getStudentsByClass(
             @PathVariable Long classId
@@ -55,8 +71,8 @@ public class StudentController {
                         s.getId(),
                         s.getAdmissionNumber(),
                         s.getUser().getId(),
-                        s.getSchoolClass().getId(),
-                        s.getSchoolClass().getName()
+                        s.getSchoolClass() != null ? s.getSchoolClass().getId() : null,
+                        s.getSchoolClass() != null ? s.getSchoolClass().getName() : "Unassigned"
                 ))
                 .toList();
 

@@ -11,5 +11,7 @@ public interface TeacherService {
 
     Teacher getTeacherById(Long id);
 
+    java.util.List<Teacher> getAllTeachers();
+
     void deleteTeacher(Long id);
 }

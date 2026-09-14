@@ -37,6 +37,11 @@ public class ParentServiceImpl implements ParentService {
     }
 
     @Override
+    public List<Parent> getAllParents() {
+        return parentRepository.findAll();
+    }
+
+    @Override
     public void deleteParent(Long id) {
         parentRepository.deleteById(id);
     }

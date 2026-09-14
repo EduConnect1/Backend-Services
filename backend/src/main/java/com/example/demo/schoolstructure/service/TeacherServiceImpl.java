@@ -40,6 +40,11 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
+    public java.util.List<Teacher> getAllTeachers() {
+        return teacherRepository.findAll();
+    }
+
+    @Override
     public void deleteTeacher(Long id) {
         teacherRepository.deleteById(id);
     }

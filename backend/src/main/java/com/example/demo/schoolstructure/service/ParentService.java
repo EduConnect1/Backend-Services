@@ -11,5 +11,7 @@ public interface ParentService {
 
     List<Parent> getParentsByStudent(Long studentId);
 
+    List<Parent> getAllParents();
+
     void deleteParent(Long id);
 }

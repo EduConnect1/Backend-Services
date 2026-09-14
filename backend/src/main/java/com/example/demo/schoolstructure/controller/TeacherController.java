@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
@@ -42,6 +43,21 @@ public class TeacherController {
                         saved.getEmployeeNumber(),
                         null 
                 ));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<TeacherResponse>> getAllTeachers() {
+        List<TeacherResponse> response = teacherService.getAllTeachers()
+                .stream()
+                .map(t -> new TeacherResponse(
+                        t.getId(),
+                        t.getUser().getId(),
+                        t.getEmployeeNumber(),
+                        t.getSubjects() != null ? t.getSubjects().stream().map(s -> s.getName()).collect(Collectors.toSet()) : java.util.Collections.emptySet()
+                ))
+                .toList();
+
+        return ResponseEntity.ok(response);
     }
 
     @PostMapping("/{teacherId}/subjects")

@@ -33,6 +33,9 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Student> getStudentsByClass(Long classId) {
+        if (classId == null) {
+            return studentRepository.findAll();
+        }
         return studentRepository.findBySchoolClassId(classId);
     }
 

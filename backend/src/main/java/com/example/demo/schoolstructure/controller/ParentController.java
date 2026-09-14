@@ -43,6 +43,21 @@ public class ParentController {
                 ));
     }
 
+    @GetMapping
+    public ResponseEntity<List<ParentResponse>> getAllParents() {
+        List<ParentResponse> response = parentService.getAllParents()
+                .stream()
+                .map(p -> new ParentResponse(
+                        p.getId(),
+                        p.getUser().getId(),
+                        p.getStudent() != null ? p.getStudent().getId() : null,
+                        p.getStudent() != null ? p.getStudent().getAdmissionNumber() : "N/A"
+                ))
+                .toList();
+
+        return ResponseEntity.ok(response);
+    }
+
     @GetMapping("/student/{studentId}")
     public ResponseEntity<List<ParentResponse>> getParentsByStudent(
             @PathVariable Long studentId
