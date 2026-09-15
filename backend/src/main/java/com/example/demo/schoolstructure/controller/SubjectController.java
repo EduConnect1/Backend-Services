@@ -37,6 +37,21 @@ public class SubjectController {
                 ));
     }
 
+    @GetMapping
+    public ResponseEntity<List<SubjectResponse>> getAllSubjects() {
+        List<SubjectResponse> response = subjectService.getAllSubjects()
+                .stream()
+                .map(s -> new SubjectResponse(
+                        s.getId(),
+                        s.getName(),
+                        s.getSchoolClass() != null ? s.getSchoolClass().getId() : null,
+                        s.getSchoolClass() != null ? s.getSchoolClass().getName() : "Unassigned"
+                ))
+                .toList();
+
+        return ResponseEntity.ok(response);
+    }
+
     @GetMapping("/class/{classId}")
     public ResponseEntity<List<SubjectResponse>> getSubjectsByClass(
             @PathVariable Long classId

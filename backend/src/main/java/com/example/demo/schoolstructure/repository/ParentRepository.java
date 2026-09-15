@@ -10,4 +10,6 @@ import java.util.List;
 public interface ParentRepository extends JpaRepository<Parent, Long> {
 
     List<Parent> findByStudentId(Long studentId);
+
+    java.util.Optional<Parent> findByUserId(Long userId);
 }

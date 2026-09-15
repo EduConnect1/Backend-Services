@@ -11,5 +11,7 @@ public interface SubjectService {
 
     List<Subject> getSubjectsByClass(Long classId);
 
+    List<Subject> getAllSubjects();
+
     void deleteSubject(Long id);
 }
